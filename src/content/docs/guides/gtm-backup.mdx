@@ -1,0 +1,58 @@
+---
+title: Como fazer backup do Google Tag Manager
+description: Passo a passo para exportar e restaurar seu container GTM antes de importar o ShelfFlow.
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+Antes de importar qualquer arquivo no Google Tag Manager, e importante fazer um **backup do seu container**. Isso garante que, se algo der errado, voce pode restaurar tudo como estava.
+
+<Aside type="danger">
+  Se voce importar um arquivo no GTM usando a opcao **Substituir (Overwrite)** em vez de **Mesclar (Merge)**, todas as suas tags, acionadores e variaveis existentes serao **apagados permanentemente**. O backup e a unica forma de recuperar.
+</Aside>
+
+## Exportar o container (backup)
+
+<Steps>
+1. Acesse [tagmanager.google.com](https://tagmanager.google.com/) e selecione o container da sua loja
+
+2. Clique em **Administrador** (icone de engrenagem no canto superior direito)
+
+3. Na coluna **Container**, clique em **Exportar container**
+
+4. Em **Escolher uma versao**, selecione a **versao mais recente** (a que esta publicada)
+
+5. Clique em **Exportar**
+
+6. Salve o arquivo `.json` no seu computador em um local seguro (ex: pasta "Backup GTM")
+</Steps>
+
+<Aside type="tip">
+  De um nome descritivo ao arquivo, como `backup-gtm-minhaloja-2026-04-06.json`. Assim voce sabe exatamente quando o backup foi feito.
+</Aside>
+
+## Restaurar o backup (se necessario)
+
+Se algo deu errado apos a importacao e voce precisa voltar ao estado anterior:
+
+<Steps>
+1. No GTM, va em **Administrador** → **Importar container**
+
+2. Selecione o arquivo `.json` do backup que voce exportou
+
+3. Desta vez, escolha **Substituir (Overwrite)** — isso vai restaurar exatamente o estado do backup, removendo o que foi importado depois
+
+4. Confirme e clique em **Enviar** → **Publicar**
+</Steps>
+
+<Aside type="caution">
+  Ao restaurar o backup com Substituir, voce perde tudo que foi adicionado depois do backup (incluindo a tag do ShelfFlow). Se quiser manter o ShelfFlow, refaca a importacao usando **Mesclar (Merge)** apos restaurar.
+</Aside>
+
+## Quando o backup nao e necessario
+
+Se o seu GTM esta **completamente vazio** (voce acabou de criar a conta e nunca adicionou nenhuma tag), o backup nao e necessario. No onboarding do ShelfFlow, voce pode marcar a opcao "meu GTM esta vazio" para pular esta etapa.
+
+## Importar o ShelfFlow com seguranca
+
+Apos fazer o backup, siga o [guia de setup Nuvemshop + GTM](/guides/nuvemshop-setup/) para importar o arquivo do ShelfFlow. Lembre-se: **sempre use Mesclar (Merge)**, nunca Substituir.
