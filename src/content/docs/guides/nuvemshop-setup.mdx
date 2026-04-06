@@ -58,24 +58,20 @@ O GTM e o metodo de injecao das prateleiras na sua loja. Ele carrega o script do
 
 ### 3.3 Adicionar a tag do ShelfFlow no GTM
 
+Durante o onboarding, o ShelfFlow fornece o **script completo** pronto para uso. Basta copia-lo e colar no GTM.
+
 <Steps>
-1. No GTM, va em **Tags > Nova**
-2. Escolha o tipo **HTML Personalizado**
-3. Cole o seguinte codigo:
-
-   ```html
-   <script src="https://shelfflow.com.br/static/shelfflow.min.js"
-           data-token="SEU_TOKEN_AQUI"
-           defer></script>
-   ```
-
-4. Em **Acionamento**, selecione **All Pages** (ou crie um acionador so para a homepage)
-5. Salve a tag
-6. Clique em **Enviar** para publicar as alteracoes
+1. No onboarding do ShelfFlow, copie o **script completo** fornecido
+2. No GTM, va em **Tags > Nova**
+3. Escolha o tipo **HTML Personalizado**
+4. Cole o script copiado do onboarding
+5. Em **Acionamento**, selecione **All Pages** (ou crie um acionador so para a homepage)
+6. Salve a tag
+7. Clique em **Enviar** para publicar as alteracoes
 </Steps>
 
 <Aside type="tip">
-  O `data-token` e o token storefront da sua loja. Voce encontra no painel do ShelfFlow, na pagina de configuracoes.
+  O script completo e fornecido no onboarding, ja com o token da sua loja. Nao e necessario editar nada — basta copiar e colar.
 </Aside>
 
 ### 3.4 Verificar a instalacao
@@ -92,7 +88,7 @@ O GTM e o metodo de injecao das prateleiras na sua loja. Ele carrega o script do
 
 | Problema | Solucao |
 |----------|---------|
-| Prateleiras nao aparecem | Verifique se o GTM esta publicado e o token esta correto |
+| Prateleiras nao aparecem | Verifique se o GTM esta publicado e o script esta correto |
 | Produtos nao carregam | Verifique se a loja esta conectada no painel ShelfFlow |
 | Posicao errada | Tente outra posicao ou use um seletor CSS customizado |
 | So funciona no preview | Certifique-se de ter clicado **Enviar** no GTM |
