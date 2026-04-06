@@ -56,22 +56,44 @@ O GTM e o metodo de injecao das prateleiras na sua loja. Ele carrega o script do
 4. Salve
 </Steps>
 
-### 3.3 Adicionar a tag do ShelfFlow no GTM
+### 3.3 Importar a tag do ShelfFlow no GTM
 
-Durante o onboarding, o ShelfFlow fornece o **script completo** pronto para uso. Basta copia-lo e colar no GTM.
+Durante o onboarding, o ShelfFlow fornece um **arquivo de configuracao** do GTM pronto para importar. Esse arquivo contem a tag com o script da sua loja.
+
+<Aside type="danger">
+  **Atenção: faca backup do seu GTM antes de importar.** Se voce ja tem tags configuradas no GTM, uma importacao incorreta pode apaga-las. Siga os passos abaixo com cuidado — sempre escolha **Mesclar (Merge)**, nunca Substituir (Overwrite).
+</Aside>
+
+#### Backup do GTM (recomendado)
+
+Antes de importar, faca um backup do seu container:
 
 <Steps>
-1. No onboarding do ShelfFlow, copie o **script completo** fornecido
-2. No GTM, va em **Tags > Nova**
-3. Escolha o tipo **HTML Personalizado**
-4. Cole o script copiado do onboarding
-5. Em **Acionamento**, selecione **All Pages** (ou crie um acionador so para a homepage)
-6. Salve a tag
-7. Clique em **Enviar** para publicar as alteracoes
+1. No GTM, va em **Administrador** (engrenagem no topo)
+2. Na coluna do container, clique em **Exportar container**
+3. Selecione a versao mais recente e clique em **Exportar**
+4. Salve o arquivo JSON no seu computador
 </Steps>
 
+#### Importar o arquivo do ShelfFlow
+
+<Steps>
+1. No onboarding do ShelfFlow, faca o **download do arquivo GTM**
+2. No GTM, va em **Administrador** (engrenagem no topo)
+3. Na coluna do container, clique em **Importar container**
+4. Selecione o arquivo baixado do ShelfFlow
+5. **IMPORTANTE:** Escolha a opcao **Mesclar (Merge)** — isso adiciona a tag do ShelfFlow sem apagar suas tags existentes
+6. Selecione **Renomear tags conflitantes** se solicitado
+7. Confirme a importacao
+8. Volte para o **Espaco de trabalho**, revise as alteracoes e clique em **Enviar** para publicar
+</Steps>
+
+<Aside type="caution">
+  Nunca selecione "Substituir" (Overwrite) na importacao. Isso apaga **todas** as suas tags existentes e substitui pelo conteudo do arquivo importado. Sempre use **Mesclar (Merge)**.
+</Aside>
+
 <Aside type="tip">
-  O script completo e fornecido no onboarding, ja com o token da sua loja. Nao e necessario editar nada — basta copiar e colar.
+  Se algo der errado, voce pode restaurar o backup: va em **Administrador > Importar container** e importe o arquivo JSON que voce exportou antes.
 </Aside>
 
 ### 3.4 Verificar a instalacao
