@@ -1,0 +1,53 @@
+---
+title: Compatibilidade com temas
+description: Lista de temas Nuvemshop compativeis com o ShelfFlow e como funciona o posicionamento em cada um.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+O ShelfFlow foi testado e validado em todos os **11 temas classicos** da Nuvemshop. O posicionamento automatico funciona sem nenhuma configuracao adicional.
+
+## Temas compativeis
+
+| Tema | Status | Observacao |
+|------|--------|-----------|
+| **Amazonas** | Compativel | Todos os seletores funcionam |
+| **Brasilia** | Compativel | Todos os seletores funcionam |
+| **Cali** | Compativel | Todos os seletores funcionam |
+| **Lima** | Compativel | Todos os seletores funcionam |
+| **Morelia** | Compativel | Todos os seletores funcionam |
+| **Recife** | Compativel | Todos os seletores funcionam |
+| **Rio** | Compativel | Todos os seletores funcionam |
+| **Toluca** | Compativel | Todos os seletores funcionam |
+| **Simple** | Compativel | Estrutura inferida, funcional |
+| **Trend** | Compativel | Estrutura inferida, funcional |
+| **Jeronimo** | Compativel | Estrutura inferida, funcional |
+
+## Temas nao suportados
+
+| Tema | Motivo |
+|------|--------|
+| **Patagonia** | Usa NubeSDK (Next.js) — arquitetura diferente dos temas classicos. Compatibilidade planejada para versao futura. |
+
+## Como o ShelfFlow detecta o tema
+
+O ShelfFlow nao precisa saber qual tema voce usa. Em vez disso, ele procura **elementos HTML semanticos** que sao comuns entre os temas classicos da Nuvemshop:
+
+- `[data-store="home-slider"]` — banner principal
+- `section[data-store="home-products-featured"]` — produtos em destaque
+- `[data-store="home-banner-promotional"]` — banners promocionais
+- `footer` — rodape
+
+Se o seu tema usa classes CSS diferentes (por exemplo, um tema customizado), voce pode informar um **seletor CSS customizado** na configuracao da prateleira.
+
+## Temas customizados
+
+Se voce usa um tema customizado ou comprado de terceiros:
+
+1. O posicionamento automatico **pode funcionar** se o tema seguir a estrutura padrao da Nuvemshop
+2. Se nao funcionar, use um **seletor CSS customizado** na configuracao da prateleira
+3. Para encontrar o seletor correto, use o **Inspecionar Elemento** do navegador (F12) e procure o elemento apos o qual voce quer inserir a prateleira
+
+<Aside type="tip">
+  Copie o seletor CSS do elemento desejado (ex: `.meu-banner-principal`) e cole no campo "Seletor CSS customizado" da prateleira. O ShelfFlow vai usar esse seletor como referencia.
+</Aside>

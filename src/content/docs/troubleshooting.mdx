@@ -1,0 +1,87 @@
+---
+title: Resolucao de problemas
+description: Solucoes para os problemas mais comuns ao usar o ShelfFlow.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## Prateleiras nao aparecem na loja
+
+### Verifique o GTM
+
+<Steps>
+1. Acesse o Google Tag Manager
+2. Confirme que a tag do ShelfFlow esta **publicada** (nao so salva — e preciso clicar "Enviar")
+3. Use o **modo preview** do GTM para verificar se a tag esta disparando na homepage
+4. Verifique se o `data-token` no snippet esta correto
+</Steps>
+
+### Verifique a conexao da loja
+
+1. Acesse o painel do ShelfFlow
+2. Confirme que sua loja aparece como **conectada**
+3. Se a loja nao aparece, reconecte via **Instalar na Nuvemshop**
+
+### Verifique o tema
+
+O ShelfFlow funciona em temas classicos da Nuvemshop. Se voce usa o tema **Patagonia**, ele ainda nao e suportado.
+
+## Produtos fora de ordem
+
+Se os produtos da prateleira nao estao na ordem que voce definiu:
+
+1. Abra a prateleira no painel do ShelfFlow
+2. Verifique a ordem dos produtos
+3. Clique em **Salvar** novamente — isso gera um novo snapshot da ordem
+
+<Aside type="tip">
+  O ShelfFlow salva um snapshot dos produtos no banco de dados para garantir a ordem. Se voce editou a prateleira antes dessa funcionalidade existir, basta salvar novamente para atualizar.
+</Aside>
+
+## Prateleira na posicao errada
+
+1. Tente uma posicao diferente (ex: trocar "apos os destaques" por "apos o banner")
+2. Use um **seletor CSS customizado** para controle preciso:
+   - Abra o **Inspecionar Elemento** (F12) na homepage
+   - Encontre o elemento de referencia
+   - Copie o seletor CSS
+   - Cole no campo "Seletor CSS customizado" da prateleira
+
+## Login nao funciona
+
+### Botao "Enviar codigo" desabilitado
+
+Isso pode acontecer se o widget de verificacao (Turnstile) nao carregou. Tente:
+
+1. Desabilitar extensoes de bloqueio de anuncios (uBlock, AdBlock)
+2. Limpar o cache do navegador
+3. Tentar em uma janela anonima
+4. Verificar se o navegador esta atualizado
+
+### Codigo OTP nao chega
+
+1. Verifique a pasta de spam/lixo eletronico
+2. Confirme que o email digitado esta correto
+3. Aguarde ate 2 minutos — em horarios de pico pode haver atraso
+4. Tente novamente
+
+## Produtos nao carregam
+
+Se a prateleira aparece mas sem produtos:
+
+1. Verifique se os produtos selecionados estao **ativos** na Nuvemshop
+2. Verifique se os produtos tem **imagens** cadastradas
+3. Se usa curadoria manual, confirme que os produtos ainda existem no catalogo
+4. Se usa categoria, confirme que a categoria tem produtos ativos
+
+## Performance lenta
+
+O script do ShelfFlow tem ~3KB e carrega de forma assincrona. Se voce perceber lentidao:
+
+1. Verifique se o problema nao e do proprio tema ou de outros scripts
+2. Use o [Google PageSpeed Insights](https://pagespeed.web.dev/) para diagnosticar
+3. O ShelfFlow nao deve impactar significativamente o LCP ou CLS
+
+<Aside>
+  Se o problema persistir, entre em contato pelo email **contato@eikonikos.com** com o link da sua loja e uma descricao do problema.
+</Aside>

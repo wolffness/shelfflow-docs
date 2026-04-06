@@ -1,0 +1,98 @@
+---
+title: Setup Nuvemshop + GTM
+description: Passo a passo completo para conectar o ShelfFlow a sua loja Nuvemshop via Google Tag Manager.
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+Este guia cobre todo o processo de integracao: desde a instalacao do app ate as prateleiras aparecendo na loja.
+
+## Pre-requisitos
+
+- Loja ativa na Nuvemshop com tema classico
+- Conta no [Google Tag Manager](https://tagmanager.google.com/) (gratuita)
+- Conta no ShelfFlow (crie em [shelfflow.com.br](https://shelfflow.com.br))
+
+## Parte 1: Instalar o ShelfFlow
+
+<Steps>
+1. Acesse [shelfflow.com.br](https://shelfflow.com.br) e clique em **Comecar gratis**
+2. Informe seu email e complete o cadastro
+3. Na tela de onboarding, clique em **Instalar na Nuvemshop**
+4. Autorize o app na tela de permissoes da Nuvemshop
+5. Voce sera redirecionado de volta ao ShelfFlow
+</Steps>
+
+## Parte 2: Criar sua primeira prateleira
+
+<Steps>
+1. No painel do ShelfFlow, clique em **Nova Prateleira**
+2. Preencha o titulo (ex: "Mais Vendidos")
+3. Selecione os produtos via curadoria manual ou categoria
+4. Escolha a posicao (ex: "Apos o banner")
+5. Salve a prateleira
+</Steps>
+
+## Parte 3: Configurar o Google Tag Manager
+
+O GTM e o metodo de injecao das prateleiras na sua loja. Ele carrega o script do ShelfFlow automaticamente em todas as paginas.
+
+### 3.1 Criar o container GTM (se ainda nao tem)
+
+<Steps>
+1. Acesse [tagmanager.google.com](https://tagmanager.google.com/)
+2. Clique em **Criar conta**
+3. Preencha o nome da conta (nome da sua loja)
+4. Crie um container do tipo **Web**
+5. Copie o **codigo de instalacao** (dois snippets: `<head>` e `<body>`)
+</Steps>
+
+### 3.2 Instalar o GTM na Nuvemshop
+
+<Steps>
+1. No admin da Nuvemshop, va em **Configuracoes > Codigos externos**
+2. Cole o snippet do `<head>` no campo **Header**
+3. Cole o snippet do `<body>` no campo **Inicio do body**
+4. Salve
+</Steps>
+
+### 3.3 Adicionar a tag do ShelfFlow no GTM
+
+<Steps>
+1. No GTM, va em **Tags > Nova**
+2. Escolha o tipo **HTML Personalizado**
+3. Cole o seguinte codigo:
+
+   ```html
+   <script src="https://shelfflow.com.br/static/shelfflow.min.js"
+           data-token="SEU_TOKEN_AQUI"
+           defer></script>
+   ```
+
+4. Em **Acionamento**, selecione **All Pages** (ou crie um acionador so para a homepage)
+5. Salve a tag
+6. Clique em **Enviar** para publicar as alteracoes
+</Steps>
+
+<Aside type="tip">
+  O `data-token` e o token storefront da sua loja. Voce encontra no painel do ShelfFlow, na pagina de configuracoes.
+</Aside>
+
+### 3.4 Verificar a instalacao
+
+1. Acesse a homepage da sua loja
+2. As prateleiras devem aparecer nas posicoes configuradas
+3. Se nao aparecerem, use o **modo preview** do GTM para debugar
+
+<Aside type="caution">
+  O GTM pode ter cache. Apos publicar alteracoes, espere alguns minutos e limpe o cache do navegador se necessario.
+</Aside>
+
+## Solucao de problemas
+
+| Problema | Solucao |
+|----------|---------|
+| Prateleiras nao aparecem | Verifique se o GTM esta publicado e o token esta correto |
+| Produtos nao carregam | Verifique se a loja esta conectada no painel ShelfFlow |
+| Posicao errada | Tente outra posicao ou use um seletor CSS customizado |
+| So funciona no preview | Certifique-se de ter clicado **Enviar** no GTM |

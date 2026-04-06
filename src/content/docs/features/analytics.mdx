@@ -1,0 +1,52 @@
+---
+title: Analytics
+description: Acompanhe impressoes, cliques e CTR das suas prateleiras e produtos.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+O **dashboard de analytics** do ShelfFlow mostra como suas prateleiras estao performando. Voce acompanha metricas por prateleira e por produto individual.
+
+## Metricas disponiveis
+
+### Por prateleira
+- **Impressoes** — Quantas vezes a prateleira foi exibida na homepage
+- **Cliques** — Quantas vezes um produto da prateleira foi clicado
+- **CTR** — Taxa de cliques (cliques / impressoes)
+
+### Por produto
+Dentro de cada prateleira, voce pode expandir para ver as metricas individuais de cada produto:
+- Impressoes do produto
+- Cliques no produto
+- CTR individual
+- Imagem do produto (puxada da Nuvemshop)
+
+## Como acessar
+
+O analytics esta disponivel no **dashboard** do ShelfFlow:
+
+1. Acesse [shelfflow.com.br/dashboard](https://shelfflow.com.br/dashboard)
+2. Faca login com seu email
+3. Na pagina inicial, voce ve o **resumo geral** (total de impressoes, cliques, CTR)
+4. Abaixo, a lista de prateleiras com suas metricas
+5. Clique em uma prateleira para expandir e ver os **produtos individuais**
+
+## Interpretando os dados
+
+| CTR | Interpretacao | Acao sugerida |
+|-----|--------------|---------------|
+| > 5% | Excelente | Manter a prateleira como esta |
+| 2-5% | Bom | Testar novos produtos ou posicao |
+| < 2% | Baixo | Rever produtos, titulo ou posicionamento |
+
+<Aside type="tip">
+  O **posicionamento** da prateleira na homepage tem grande impacto no CTR. Prateleiras "apos o banner" geralmente tem mais visibilidade do que "antes do rodape".
+</Aside>
+
+## Periodo de dados
+
+Os dados de analytics sao acumulados desde a instalacao. Atualmente, os dados sao exibidos como **totais acumulados** (all-time).
+
+<Aside>
+  Em versoes futuras, planejamos adicionar filtros por periodo (7 dias, 30 dias, customizado) e graficos de tendencia.
+</Aside>

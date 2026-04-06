@@ -1,0 +1,68 @@
+---
+title: Perguntas frequentes
+description: Respostas para as duvidas mais comuns sobre o ShelfFlow.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## Geral
+
+### O que e o ShelfFlow?
+
+O ShelfFlow e um app para Nuvemshop que permite criar prateleiras de produtos personalizadas na homepage da sua loja. Voce escolhe quais produtos destacar, onde posicionar e acompanha os resultados com analytics.
+
+### Preciso saber programar?
+
+Nao. Tudo e configurado pelo painel do ShelfFlow, sem mexer em codigo. A unica configuracao tecnica e a instalacao do Google Tag Manager, que e feita uma unica vez com um guia passo a passo.
+
+### Funciona em qualquer tema da Nuvemshop?
+
+Funciona em todos os **11 temas classicos**: Amazonas, Brasilia, Cali, Lima, Morelia, Recife, Rio, Toluca, Simple, Trend e Jeronimo. O tema Patagonia (NubeSDK) ainda nao e suportado.
+
+### O ShelfFlow deixa minha loja lenta?
+
+Nao. O script do ShelfFlow tem apenas **~3KB** (menor que uma imagem de produto) e carrega de forma assincrona (`defer`). Ele nao bloqueia o carregamento da pagina.
+
+### As prateleiras sao responsivas?
+
+Sim. O layout se adapta automaticamente: 4-5 produtos no desktop, 3 no tablet e 2 no mobile. O scroll horizontal usa `scroll-snap` nativo do navegador, sem bibliotecas externas.
+
+## Conta e pagamento
+
+### Quanto custa?
+
+R$ 19,90/mes com todas as funcionalidades incluidas. Menos de R$ 1 por dia.
+
+### Tem trial gratuito?
+
+Sim, 3 dias de trial com acesso completo. Nenhum cartao de credito necessario para comecar.
+
+### Como cancelo?
+
+Pelo dashboard do ShelfFlow, na secao de assinatura. O cancelamento e imediato e voce nao sera cobrado novamente.
+
+### Meus dados sao perdidos ao cancelar?
+
+Nao. Seus dados (configuracoes de prateleiras, analytics) ficam salvos por 30 dias apos o cancelamento. Se voce reativar nesse periodo, tudo volta como estava.
+
+## Tecnico
+
+### Por que usar GTM e nao Script Tags?
+
+O Google Tag Manager oferece mais controle e nao sofre com cache de CDN. Voce pode ativar/desativar a tag sem precisar tocar no codigo do tema, e o ShelfFlow funciona imediatamente apos a publicacao no GTM.
+
+### Posso usar o ShelfFlow sem GTM?
+
+Atualmente, o GTM e o metodo recomendado de instalacao. Se voce ja tem o GTM configurado na loja, a integracao leva menos de 2 minutos.
+
+### O ShelfFlow acessa dados dos meus clientes?
+
+Nao. O ShelfFlow acessa apenas os **dados publicos** da sua loja (produtos, categorias, imagens) atraves da API da Nuvemshop. Nao acessamos dados de clientes, pedidos ou informacoes pessoais.
+
+### Como funciona o analytics?
+
+O script do ShelfFlow registra **impressoes** (quando a prateleira aparece na tela) e **cliques** (quando o visitante clica em um produto). Esses dados sao agregados e exibidos no dashboard. Nenhum dado pessoal do visitante e coletado.
+
+<Aside type="tip">
+  Tem uma duvida que nao esta aqui? Entre em contato pelo email **contato@eikonikos.com**.
+</Aside>

@@ -1,0 +1,56 @@
+---
+title: Prateleiras
+description: Crie e configure prateleiras de produtos para a homepage da sua loja.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+As **prateleiras** sao o recurso central do ShelfFlow. Cada prateleira e uma secao de produtos que aparece na homepage da sua loja, com titulo, layout e posicao personalizados.
+
+## Criar uma prateleira
+
+<Steps>
+1. No painel do ShelfFlow, clique em **Nova Prateleira**
+2. Preencha o **titulo** — esse e o texto que aparece acima dos produtos na loja (ex: "Lancamentos", "Os Mais Vendidos")
+3. Escolha o **modo de selecao** de produtos:
+   - **Curadoria manual** — selecione produtos um a um, na ordem desejada
+   - **Por categoria** — exibe os produtos de uma categoria automaticamente
+4. Defina a **posicao** na homepage
+5. Clique em **Salvar**
+</Steps>
+
+## Configuracoes
+
+### Titulo
+
+O titulo aparece como heading da secao na homepage. Use textos curtos e atrativos. Exemplos:
+
+| Bom | Evitar |
+|-----|--------|
+| Mais Vendidos | Produtos mais vendidos da loja em 2026 |
+| Lancamentos | Novos produtos adicionados recentemente |
+| Para Presentear | Sugestoes de presente para voce |
+
+### Limite de produtos
+
+Voce pode definir quantos produtos aparecem por prateleira (padrao: 12, maximo: 30). No modo curadoria, o limite e o numero de produtos selecionados.
+
+### Layout
+
+As prateleiras usam um **slider horizontal** com scroll-snap nativo. Em telas menores, o slider se adapta automaticamente:
+
+- **Desktop**: 4-5 produtos visiveis
+- **Tablet**: 3 produtos visiveis
+- **Mobile**: 2 produtos visiveis
+
+<Aside type="tip">
+  O CSS do ShelfFlow e isolado com o prefixo `.shelfflow-*`, entao nao interfere no tema da sua loja.
+</Aside>
+
+## Editar e excluir
+
+Para editar uma prateleira existente, clique nela no painel. Para excluir, use o botao de exclusao na pagina de edicao.
+
+<Aside type="caution">
+  Ao excluir uma prateleira, ela desaparece da homepage imediatamente. A acao nao pode ser desfeita.
+</Aside>
