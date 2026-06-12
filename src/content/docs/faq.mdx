@@ -9,11 +9,11 @@ import { Aside } from '@astrojs/starlight/components';
 
 ### O que e o ShelfFlow?
 
-O ShelfFlow e um app para Nuvemshop que permite criar prateleiras de produtos personalizadas na homepage da sua loja. Voce escolhe quais produtos destacar, onde posicionar e acompanha os resultados com analytics.
+O ShelfFlow e um app para Nuvemshop que permite criar vitrines de produtos na homepage, acompanhar resultados com analytics e usar inteligencia comercial para decidir o que destacar.
 
 ### Preciso saber programar?
 
-Nao. Tudo e configurado pelo painel do ShelfFlow, sem mexer em codigo. A unica configuracao tecnica e importar um arquivo (fornecido no onboarding) no Google Tag Manager — feito uma unica vez.
+Nao. Tudo e configurado pelo painel do ShelfFlow, sem mexer no codigo do tema. A configuracao tecnica principal e instalar a coleta via Google Tag Manager ou scripts orientados pelo app.
 
 ### Funciona em qualquer tema da Nuvemshop?
 
@@ -23,7 +23,7 @@ Funciona em todos os **11 temas classicos**: Amazonas, Brasilia, Cali, Lima, Mor
 
 Nao. O script do ShelfFlow tem apenas **~3KB** (menor que uma imagem de produto) e carrega de forma assincrona (`defer`). Ele nao bloqueia o carregamento da pagina.
 
-### As prateleiras sao responsivas?
+### As vitrines sao responsivas?
 
 Sim. O layout se adapta automaticamente: 4-5 produtos no desktop, 3 no tablet e 2 no mobile. O scroll horizontal usa `scroll-snap` nativo do navegador, sem bibliotecas externas.
 
@@ -31,11 +31,15 @@ Sim. O layout se adapta automaticamente: 4-5 produtos no desktop, 3 no tablet e 
 
 ### Quanto custa?
 
-R$ 19,90/mes com todas as funcionalidades incluidas. Menos de R$ 1 por dia.
+Os planos atuais ficam na pagina de precos e no checkout do ShelfFlow. Voce pode escolher mensal ou anual, quando disponivel.
 
 ### Tem trial gratuito?
 
-Sim, 3 dias de trial com acesso completo. Nenhum cartao de credito necessario para comecar.
+Sim. O trial libera uma degustacao do Shelf+ por 10 dias.
+
+### O Shelf+ inclui onboarding personalizado?
+
+Sim. Clientes Shelf+ podem agendar uma chamada de onboarding personalizada para revisar a loja, validar tracking e definir a primeira vitrine.
 
 ### Como cancelo?
 
@@ -43,7 +47,7 @@ Pelo dashboard do ShelfFlow, na secao de assinatura. O cancelamento e imediato e
 
 ### Meus dados sao perdidos ao cancelar?
 
-Nao. Seus dados (configuracoes de prateleiras, analytics) ficam salvos por 30 dias apos o cancelamento. Se voce reativar nesse periodo, tudo volta como estava.
+Nao. Seus dados de configuracao e historico operacional ficam salvos por um periodo de seguranca apos o cancelamento. Se voce reativar nesse periodo, a loja pode voltar com as configuracoes anteriores.
 
 ## Tecnico
 
@@ -53,15 +57,15 @@ O Google Tag Manager oferece mais controle e nao sofre com cache de CDN. Voce po
 
 ### Posso usar o ShelfFlow sem GTM?
 
-Atualmente, o GTM e o metodo recomendado de instalacao. Se voce ja tem o GTM configurado na loja, a integracao leva menos de 2 minutos.
+Sim. GTM e o metodo recomendado, mas o ShelfFlow tambem pode orientar scripts para checkout e confirmacao de compra quando esse caminho fizer mais sentido.
 
 ### O ShelfFlow acessa dados dos meus clientes?
 
-Nao. O ShelfFlow acessa apenas os **dados publicos** da sua loja (produtos, categorias, imagens) atraves da API da Nuvemshop. Nao acessamos dados de clientes, pedidos ou informacoes pessoais.
+O ShelfFlow usa dados da loja necessarios para criar vitrines e medir resultado: produtos, categorias, imagens, eventos de vitrine e sinais de compra para atribuicao. A leitura e usada de forma agregada para analytics e inteligencia comercial.
 
 ### Como funciona o analytics?
 
-O script do ShelfFlow registra **impressoes** (quando a prateleira aparece na tela) e **cliques** (quando o visitante clica em um produto). Esses dados sao agregados e exibidos no dashboard. Nenhum dado pessoal do visitante e coletado.
+O tracking registra **impressoes**, **cliques**, **adicionar ao carrinho** e sinais de compra quando disponiveis. Esses dados sao agregados e exibidos no dashboard para mostrar desempenho por vitrine, categoria, dispositivo e periodo.
 
 <Aside type="tip">
   Tem uma duvida que nao esta aqui? Entre em contato pelo email **contato@eikonikos.com**.

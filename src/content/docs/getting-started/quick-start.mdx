@@ -1,48 +1,62 @@
 ---
 title: Quick Start
-description: Configure o ShelfFlow na sua loja Nuvemshop em 5 minutos.
+description: Configure o ShelfFlow na sua loja Nuvemshop e chegue a primeira vitrine publicada.
 ---
 
 import { Steps, Aside } from '@astrojs/starlight/components';
 
-Siga estes passos para ter sua primeira prateleira funcionando na homepage.
+Siga estes passos para sair do primeiro acesso ate uma vitrine publicada com coleta em validacao.
 
 <Steps>
-1. **Crie sua conta**
+1. **Crie ou acesse sua conta**
 
-   Acesse [shelfflow.com.br](https://shelfflow.com.br) e clique em **Comecar gratis**. Voce tera 3 dias de trial sem compromisso.
+   Acesse [shelfflow.com.br](https://shelfflow.com.br) e entre no dashboard. O ShelfFlow envia um codigo para confirmar seu e-mail.
 
-2. **Conecte sua loja Nuvemshop**
+2. **Confirme a loja ativa**
 
-   Apos criar a conta, o ShelfFlow vai pedir para conectar sua loja. Clique em **Instalar na Nuvemshop** e autorize o app.
+   Depois do login, confira se o nome da loja aparece corretamente no topo do dashboard.
 
-3. **Crie sua primeira prateleira**
+3. **Complete o onboarding inicial**
+
+   Escolha o segmento da loja, o perfil visual das imagens e o objetivo comercial. Essas preferencias calibram as leituras do ShelfFlow.
+
+4. **Instale a coleta**
+
+   Se voce usa Google Tag Manager, gere o container no ShelfFlow, faca backup do GTM atual e importe usando merge. Veja o [guia completo de setup](/guides/nuvemshop-setup/).
+
+   Se sua loja nao usa GTM, use os scripts indicados no app para checkout e confirmacao de compra.
+
+5. **Crie sua primeira vitrine**
 
    No painel do ShelfFlow:
-   - Clique em **Nova Prateleira**
-   - Escolha um titulo (ex: "Mais Vendidos")
-   - Selecione os produtos manualmente ou escolha uma categoria
-   - Defina a posicao na homepage (ex: "Apos o banner")
+   - clique em **Nova Vitrine**;
+   - escolha um titulo claro;
+   - selecione produtos manualmente ou use uma categoria;
+   - defina a posicao na homepage;
+   - confira o preview;
+   - publique.
 
-4. **Configure o Google Tag Manager**
+6. **Valide na loja**
 
-   No onboarding, o ShelfFlow fornece um arquivo para importar no GTM. Faca backup do GTM antes e use a opcao **Mesclar (Merge)**. Veja o [guia completo de setup](/guides/nuvemshop-setup/).
+   Abra a homepage da loja em uma aba anonima e confira se a vitrine aparece no lugar esperado.
 
-5. **Pronto!**
+7. **Acompanhe os primeiros sinais**
 
-   Acesse a homepage da sua loja e veja a prateleira funcionando. Acompanhe os resultados no [dashboard de analytics](/features/analytics/).
+   Volte ao ShelfFlow e confira o status de tracking. Nas primeiras horas, o volume pode ser baixo; o importante e confirmar que eventos reais comecam a chegar.
 </Steps>
 
 <Aside type="tip">
-  O trial de 3 dias da acesso completo a todas as funcionalidades. Nenhum cartao de credito e necessario para comecar.
+  O trial libera uma degustacao do Shelf+ por 10 dias. No Shelf+, voce tambem pode agendar uma chamada de onboarding personalizada.
 </Aside>
 
 ## Requisitos
 
-- Loja ativa na **Nuvemshop** com tema classico (Amazonas, Brasilia, Cali, Lima, Morelia, Recife, Rio, Toluca, Simple, Trend ou Jeronimo)
-- Conta no **Google Tag Manager** (gratuita)
-- Navegador moderno (Chrome, Firefox, Safari, Edge)
+- Loja ativa na **Nuvemshop**.
+- Acesso de administrador para instalar o app e autorizar permissoes.
+- Acesso ao **Google Tag Manager**, se a instalacao for via GTM.
+- Permissao para editar codigos externos da loja, se a instalacao for por scripts.
+- Navegador moderno: Chrome, Firefox, Safari ou Edge.
 
 <Aside type="caution">
-  O tema **Patagonia** (NubeSDK) ainda nao e suportado. Estamos trabalhando na compatibilidade para uma versao futura.
+  Se a loja usa um tema altamente customizado, valide a vitrine no preview e na homepage depois de publicar. Em caso de layout inesperado, ajuste a posicao ou fale com suporte.
 </Aside>
