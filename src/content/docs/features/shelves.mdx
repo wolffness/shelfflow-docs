@@ -5,52 +5,52 @@ description: Crie e configure prateleiras de produtos para a homepage da sua loj
 
 import { Aside, Steps } from '@astrojs/starlight/components';
 
-As **prateleiras** sao o recurso central do ShelfFlow. Cada prateleira e uma secao de produtos que aparece na homepage da sua loja, com titulo, layout e posicao personalizados.
+As **prateleiras** são o recurso central do ShelfFlow. Cada prateleira é uma seção de produtos que aparece na homepage da sua loja, com título, layout e posição personalizados.
 
 ## Criar uma prateleira
 
 <Steps>
 1. No painel do ShelfFlow, clique em **Nova Prateleira**
-2. Preencha o **titulo** — esse e o texto que aparece acima dos produtos na loja (ex: "Lancamentos", "Os Mais Vendidos")
-3. Escolha o **modo de selecao** de produtos:
+2. Preencha o **título** — esse é o texto que aparece acima dos produtos na loja (ex: "Lançamentos", "Os Mais Vendidos")
+3. Escolha o **modo de seleção** de produtos:
    - **Curadoria manual** — selecione produtos um a um, na ordem desejada
    - **Por categoria** — exibe os produtos de uma categoria automaticamente
-4. Defina a **posicao** na homepage
+4. Defina a **posição** na homepage
 5. Clique em **Salvar**
 </Steps>
 
-## Configuracoes
+## Configurações
 
-### Titulo
+### Título
 
-O titulo aparece como heading da secao na homepage. Use textos curtos e atrativos. Exemplos:
+O título aparece como heading da seção na homepage. Use textos curtos e atrativos. Exemplos:
 
 | Bom | Evitar |
 |-----|--------|
 | Mais Vendidos | Produtos mais vendidos da loja em 2026 |
-| Lancamentos | Novos produtos adicionados recentemente |
-| Para Presentear | Sugestoes de presente para voce |
+| Lançamentos | Novos produtos adicionados recentemente |
+| Para Presentear | Sugestões de presente para você |
 
 ### Limite de produtos
 
-Voce pode definir quantos produtos aparecem por prateleira (padrao: 12, maximo: 30). No modo curadoria, o limite e o numero de produtos selecionados.
+Você pode definir quantos produtos aparecem por prateleira (padrão: 12, máximo: 30). No modo curadoria, o limite é o número de produtos selecionados.
 
 ### Layout
 
 As prateleiras usam um **slider horizontal** com scroll-snap nativo. Em telas menores, o slider se adapta automaticamente:
 
-- **Desktop**: 4-5 produtos visiveis
-- **Tablet**: 3 produtos visiveis
-- **Mobile**: 2 produtos visiveis
+- **Desktop**: 4-5 produtos visíveis
+- **Tablet**: 3 produtos visíveis
+- **Mobile**: 2 produtos visíveis
 
 <Aside type="tip">
-  O CSS do ShelfFlow e isolado com o prefixo `.shelfflow-*`, entao nao interfere no tema da sua loja.
+  O CSS do ShelfFlow é isolado com o prefixo `.shelfflow-*`, então não interfere no tema da sua loja.
 </Aside>
 
 ## Editar e excluir
 
-Para editar uma prateleira existente, clique nela no painel. Para excluir, use o botao de exclusao na pagina de edicao.
+Para editar uma prateleira existente, clique nela no painel. Para excluir, use o botão de exclusão na página de edição.
 
 <Aside type="caution">
-  Ao excluir uma prateleira, ela desaparece da homepage imediatamente. A acao nao pode ser desfeita.
+  Ao excluir uma prateleira, ela desaparece da homepage imediatamente. A ação não pode ser desfeita.
 </Aside>

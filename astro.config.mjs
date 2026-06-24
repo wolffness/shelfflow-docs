@@ -14,11 +14,11 @@ export default defineConfig({
 			defaultLocale: 'root',
 			disable404Route: true,
 			locales: {
-				root: { label: 'Portugues', lang: 'pt-BR' },
+				root: { label: 'Português', lang: 'pt-BR' },
 			},
 			sidebar: [
 				{
-					label: 'Comecando',
+					label: 'Começando',
 					autogenerate: { directory: 'getting-started' },
 				},
 				{
@@ -26,11 +26,15 @@ export default defineConfig({
 					autogenerate: { directory: 'features' },
 				},
 				{
-					label: 'Guias Praticos',
+					label: 'Integrações',
+					autogenerate: { directory: 'platforms' },
+				},
+				{
+					label: 'Guias Práticos',
 					autogenerate: { directory: 'guides' },
 				},
 				{
-					label: 'Referencia',
+					label: 'Referência',
 					items: [{ slug: 'faq' }, { slug: 'troubleshooting' }, { slug: 'changelog' }],
 				},
 			],

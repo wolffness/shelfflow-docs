@@ -5,10 +5,10 @@ description: Passo a passo para exportar e restaurar seu container GTM antes de 
 
 import { Steps, Aside } from '@astrojs/starlight/components';
 
-Antes de importar qualquer arquivo no Google Tag Manager, e importante fazer um **backup do seu container**. Isso garante que, se algo der errado, voce pode restaurar tudo como estava.
+Antes de importar qualquer arquivo no Google Tag Manager, é importante fazer um **backup do seu container**. Isso garante que, se algo der errado, você pode restaurar tudo como estava.
 
 <Aside type="danger">
-  Se voce importar um arquivo no GTM usando a opcao **Substituir (Overwrite)** em vez de **Mesclar (Merge)**, todas as suas tags, acionadores e variaveis existentes serao **apagados permanentemente**. O backup e a unica forma de recuperar.
+  Se você importar um arquivo no GTM usando a opção **Substituir (Overwrite)** em vez de **Mesclar (Merge)**, suas tags, seus acionadores e suas variáveis existentes serão **apagados permanentemente**. O backup é a única forma de recuperar.
 </Aside>
 
 ## Exportar o container (backup)
@@ -20,7 +20,7 @@ Antes de importar qualquer arquivo no Google Tag Manager, e importante fazer um 
 
 3. Na coluna **Container**, clique em **Exportar container**
 
-4. Em **Escolher uma versao**, selecione a **versao mais recente** (a que esta publicada)
+4. Em **Escolher uma versão**, selecione a **versão mais recente** (a que está publicada)
 
 5. Clique em **Exportar**
 
@@ -28,17 +28,17 @@ Antes de importar qualquer arquivo no Google Tag Manager, e importante fazer um 
 </Steps>
 
 <Aside type="tip">
-  De um nome descritivo ao arquivo, como `backup-gtm-minhaloja-2026-04-06.json`. Assim voce sabe exatamente quando o backup foi feito.
+  Dê um nome descritivo ao arquivo, como `backup-gtm-minhaloja-2026-04-06.json`. Assim você sabe exatamente quando o backup foi feito.
 </Aside>
 
-## Restaurar o backup (se necessario)
+## Restaurar o backup (se necessário)
 
-Se algo deu errado apos a importacao e voce precisa voltar ao estado anterior:
+Se algo deu errado após a importação e você precisa voltar ao estado anterior:
 
 <Steps>
-1. No GTM, va em **Administrador** → **Importar container**
+1. No GTM, vá em **Administrador** → **Importar container**
 
-2. Selecione o arquivo `.json` do backup que voce exportou
+2. Selecione o arquivo `.json` do backup que você exportou
 
 3. Desta vez, escolha **Substituir (Overwrite)** — isso vai restaurar exatamente o estado do backup, removendo o que foi importado depois
 
@@ -46,13 +46,13 @@ Se algo deu errado apos a importacao e voce precisa voltar ao estado anterior:
 </Steps>
 
 <Aside type="caution">
-  Ao restaurar o backup com Substituir, voce perde tudo que foi adicionado depois do backup (incluindo a tag do ShelfFlow). Se quiser manter o ShelfFlow, refaca a importacao usando **Mesclar (Merge)** apos restaurar.
+  Ao restaurar o backup com Substituir, você perde tudo que foi adicionado depois do backup (incluindo a tag do ShelfFlow). Se quiser manter o ShelfFlow, refaca a importação usando **Mesclar (Merge)** após restaurar.
 </Aside>
 
-## Quando o backup nao e necessario
+## Quando o backup não é necessário
 
-Se o seu GTM esta **completamente vazio** (voce acabou de criar a conta e nunca adicionou nenhuma tag), o backup nao e necessario. No onboarding do ShelfFlow, voce pode marcar a opcao "meu GTM esta vazio" para pular esta etapa.
+Se o seu GTM está **completamente vazio** (você acabou de criar a conta e nunca adicionou nenhuma tag), o backup não é necessário. No onboarding do ShelfFlow, você pode marcar a opção "meu GTM está vazio" para pular esta etapa.
 
-## Importar o ShelfFlow com seguranca
+## Importar o ShelfFlow com segurança
 
-Apos fazer o backup, siga o [guia de setup Nuvemshop + GTM](/guides/nuvemshop-setup/) para importar o arquivo do ShelfFlow. Lembre-se: **sempre use Mesclar (Merge)**, nunca Substituir.
+Após fazer o backup, siga o [guia de setup Nuvemshop + GTM](/guides/nuvemshop-setup/) para importar o arquivo do ShelfFlow. Lembre-se: **sempre use Mesclar (Merge)**, nunca Substituir.

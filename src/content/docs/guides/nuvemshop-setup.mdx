@@ -5,112 +5,112 @@ description: Passo a passo completo para conectar o ShelfFlow a sua loja Nuvemsh
 
 import { Steps, Aside } from '@astrojs/starlight/components';
 
-Este guia cobre todo o processo de integracao: desde a instalacao do app ate as prateleiras aparecendo na loja.
+Este guia cobre todo o processo de integração: desde a instalação do app até as prateleiras aparecendo na loja.
 
-## Pre-requisitos
+## Pré-requisitos
 
-- Loja ativa na Nuvemshop com tema classico
+- Loja ativa na Nuvemshop com tema clássico
 - Conta no [Google Tag Manager](https://tagmanager.google.com/) (gratuita)
 - Conta no ShelfFlow (crie em [shelfflow.com.br](https://shelfflow.com.br))
 
 ## Parte 1: Instalar o ShelfFlow
 
 <Steps>
-1. Acesse [shelfflow.com.br](https://shelfflow.com.br) e clique em **Comecar gratis**
-2. Informe seu email e complete o cadastro
+1. Acesse [shelfflow.com.br](https://shelfflow.com.br) e clique em **Começar grátis**
+2. Informe seu e-mail e complete o cadastro
 3. Na tela de onboarding, clique em **Instalar na Nuvemshop**
-4. Autorize o app na tela de permissoes da Nuvemshop
-5. Voce sera redirecionado de volta ao ShelfFlow
+4. Autorize o app na tela de permissões da Nuvemshop
+5. Você será redirecionado de volta ao ShelfFlow
 </Steps>
 
 ## Parte 2: Criar sua primeira prateleira
 
 <Steps>
 1. No painel do ShelfFlow, clique em **Nova Prateleira**
-2. Preencha o titulo (ex: "Mais Vendidos")
+2. Preencha o título (ex: "Mais Vendidos")
 3. Selecione os produtos via curadoria manual ou categoria
-4. Escolha a posicao (ex: "Apos o banner")
+4. Escolha a posição (ex: "Após o banner")
 5. Salve a prateleira
 </Steps>
 
 ## Parte 3: Configurar o Google Tag Manager
 
-O GTM e o metodo de injecao das prateleiras na sua loja. Ele carrega o script do ShelfFlow automaticamente em todas as paginas.
+O GTM é o método de injeção das prateleiras na sua loja. Ele carrega o script do ShelfFlow automaticamente em todas as páginas.
 
-### 3.1 Criar o container GTM (se ainda nao tem)
+### 3.1 Criar o container GTM (se ainda não tem)
 
 <Steps>
 1. Acesse [tagmanager.google.com](https://tagmanager.google.com/)
 2. Clique em **Criar conta**
 3. Preencha o nome da conta (nome da sua loja)
 4. Crie um container do tipo **Web**
-5. Copie o **codigo de instalacao** (dois snippets: `<head>` e `<body>`)
+5. Copie o **código de instalação** (dois snippets: `<head>` e `<body>`)
 </Steps>
 
 ### 3.2 Instalar o GTM na Nuvemshop
 
 <Steps>
-1. No admin da Nuvemshop, va em **Configuracoes > Codigos externos**
+1. No admin da Nuvemshop, vá em **Configurações > Códigos externos**
 2. Cole o snippet do `<head>` no campo **Header**
-3. Cole o snippet do `<body>` no campo **Inicio do body**
+3. Cole o snippet do `<body>` no campo **Início do body**
 4. Salve
 </Steps>
 
 ### 3.3 Importar a tag do ShelfFlow no GTM
 
-Durante o onboarding, o ShelfFlow fornece um **arquivo de configuracao** do GTM pronto para importar. Esse arquivo contem a tag com o script da sua loja.
+Durante o onboarding, o ShelfFlow fornece um **arquivo de configuração** do GTM pronto para importar. Esse arquivo contem a tag com o script da sua loja.
 
 <Aside type="danger">
-  **Atenção: faca backup do seu GTM antes de importar.** Se voce ja tem tags configuradas no GTM, uma importacao incorreta pode apaga-las. Siga os passos abaixo com cuidado — sempre escolha **Mesclar (Merge)**, nunca Substituir (Overwrite).
+  **Atenção: faça backup do seu GTM antes de importar.** Se você já tem tags configuradas no GTM, uma importação incorreta pode apagá-las. Siga os passos abaixo com cuidado — sempre escolha **Mesclar (Merge)**, nunca Substituir (Overwrite).
 </Aside>
 
 #### Backup do GTM (recomendado)
 
-Antes de importar, faca um backup do seu container:
+Antes de importar, faça um backup do seu container:
 
 <Steps>
-1. No GTM, va em **Administrador** (engrenagem no topo)
+1. No GTM, vá em **Administrador** (engrenagem no topo)
 2. Na coluna do container, clique em **Exportar container**
-3. Selecione a versao mais recente e clique em **Exportar**
+3. Selecione a versão mais recente e clique em **Exportar**
 4. Salve o arquivo JSON no seu computador
 </Steps>
 
 #### Importar o arquivo do ShelfFlow
 
 <Steps>
-1. No onboarding do ShelfFlow, faca o **download do arquivo GTM**
-2. No GTM, va em **Administrador** (engrenagem no topo)
+1. No onboarding do ShelfFlow, faça o **download do arquivo GTM**
+2. No GTM, vá em **Administrador** (engrenagem no topo)
 3. Na coluna do container, clique em **Importar container**
 4. Selecione o arquivo baixado do ShelfFlow
-5. **IMPORTANTE:** Escolha a opcao **Mesclar (Merge)** — isso adiciona a tag do ShelfFlow sem apagar suas tags existentes
+5. **IMPORTANTE:** Escolha a opção **Mesclar (Merge)** — isso adiciona a tag do ShelfFlow sem apagar suas tags existentes
 6. Selecione **Renomear tags conflitantes** se solicitado
-7. Confirme a importacao
-8. Volte para o **Espaco de trabalho**, revise as alteracoes e clique em **Enviar** para publicar
+7. Confirme a importação
+8. Volte para o **Espaço de trabalho**, revise as alterações e clique em **Enviar** para publicar
 </Steps>
 
 <Aside type="caution">
-  Nunca selecione "Substituir" (Overwrite) na importacao. Isso apaga **todas** as suas tags existentes e substitui pelo conteudo do arquivo importado. Sempre use **Mesclar (Merge)**.
+  Nunca selecione "Substituir" (Overwrite) na importação. Isso apaga **todas** as suas tags existentes e substitui pelo conteúdo do arquivo importado. Sempre use **Mesclar (Merge)**.
 </Aside>
 
 <Aside type="tip">
-  Se algo der errado, voce pode restaurar o backup: va em **Administrador > Importar container** e importe o arquivo JSON que voce exportou antes.
+  Se algo der errado, você pode restaurar o backup: vá em **Administrador > Importar container** e importe o arquivo JSON que você exportou antes.
 </Aside>
 
-### 3.4 Verificar a instalacao
+### 3.4 Verificar a instalação
 
 1. Acesse a homepage da sua loja
-2. As prateleiras devem aparecer nas posicoes configuradas
-3. Se nao aparecerem, use o **modo preview** do GTM para debugar
+2. As prateleiras devem aparecer nas posições configuradas
+3. Se não aparecerem, use o **modo preview** do GTM para debugar
 
 <Aside type="caution">
-  O GTM pode ter cache. Apos publicar alteracoes, espere alguns minutos e limpe o cache do navegador se necessario.
+  O GTM pode ter cache. Após publicar alterações, espere alguns minutos e limpe o cache do navegador se necessário.
 </Aside>
 
-## Solucao de problemas
+## Solução de problemas
 
-| Problema | Solucao |
+| Problema | Solução |
 |----------|---------|
-| Prateleiras nao aparecem | Verifique se o GTM esta publicado e o script esta correto |
-| Produtos nao carregam | Verifique se a loja esta conectada no painel ShelfFlow |
-| Posicao errada | Tente outra posicao ou use um seletor CSS customizado |
-| So funciona no preview | Certifique-se de ter clicado **Enviar** no GTM |
+| Prateleiras não aparecem | Verifique se o GTM está publicado e o script está correto |
+| Produtos não carregam | Verifique se a loja está conectada no painel ShelfFlow |
+| Posição errada | Tente outra posição ou use um seletor CSS customizado |
+| Só funciona no preview | Certifique-se de ter clicado **Enviar** no GTM |
