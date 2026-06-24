@@ -1,0 +1,68 @@
+---
+title: Cobrança
+description: Gerencie plano, assinatura e dados fiscais da loja.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+A aba **Cobrança** reúne o plano atual, opções de assinatura, acesso ao portal de pagamento e dados fiscais para emissão de nota.
+
+## Plano atual
+
+No topo da página, o ShelfFlow mostra:
+
+- plano ativo da loja;
+- status do período de teste, quando aplicável;
+- aviso quando a assinatura está cancelada;
+- botão para gerenciar assinatura, quando a loja já possui cobrança ativa.
+
+## Período de teste
+
+Durante o período de teste, a tela mostra quantos dias faltam para o término. Se o período acabar sem assinatura, as funcionalidades pagas podem deixar de aparecer na loja, mas as configurações permanecem salvas.
+
+<Aside type="tip">
+  Use o período de teste para validar instalação, primeira vitrine, coleta de eventos e leitura inicial de desempenho.
+</Aside>
+
+## Escolher ou alterar plano
+
+<Steps>
+1. Acesse **Cobrança**.
+2. Confira o plano atual.
+3. Compare os planos disponíveis na tabela da página.
+4. Clique em **Assinar** ou **Upgrade** no plano desejado.
+5. Conclua o pagamento no ambiente seguro de cobrança.
+</Steps>
+
+Os preços e recursos vigentes aparecem dentro do ShelfFlow. Use a tela de cobrança como fonte final quando houver diferença entre materiais antigos e o painel.
+
+## Gerenciar assinatura
+
+Quando a assinatura já está ativa, use **Gerenciar assinatura** para abrir o portal de cobrança. Nele você pode atualizar forma de pagamento, revisar assinatura ou cancelar quando necessário.
+
+## Dados fiscais
+
+A seção **Dados fiscais** guarda as informações usadas para emissão de NFS-e pelo sistema financeiro:
+
+- CPF ou CNPJ;
+- razão social ou nome;
+- endereço fiscal;
+- e-mail fiscal;
+- telefone, quando aplicável.
+
+Mantenha esses dados atualizados antes da próxima cobrança para evitar emissão incorreta.
+
+## Problemas comuns
+
+| Sintoma | Causa provável | Como resolver |
+|---|---|---|
+| Não consigo abrir o pagamento | Sessão expirada ou bloqueio do navegador | Recarregue o painel e tente novamente |
+| O plano parece incorreto | Mudança recente ainda não refletiu no painel | Aguarde alguns minutos e recarregue a sessão |
+| Nota com dados antigos | Dados fiscais estavam desatualizados na cobrança anterior | Atualize os dados fiscais antes da próxima emissão |
+| Assinatura cancelada | Cancelamento feito no portal de cobrança | Reative escolhendo um plano disponível |
+
+## Próximos passos
+
+- [Time](/features/time/) - convide as pessoas que ajudam a operar a loja.
+- [Configurações](/features/configuracoes/) - revise dados da loja e instalação.
+- [Relatórios](/features/analytics/) - acompanhe os recursos liberados pelo plano.

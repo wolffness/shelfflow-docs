@@ -1,0 +1,68 @@
+---
+title: Time
+description: Convide membros, acompanhe convites pendentes e controle o acesso da equipe.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+A aba **Time** gerencia quem pode acessar a loja no ShelfFlow. Use essa área para convidar pessoas, remover acessos e acompanhar convites pendentes.
+
+## O que você vê
+
+- quantidade de membros ativos;
+- limite de membros do plano;
+- lista de membros ativos;
+- papel de cada pessoa;
+- convites pendentes;
+- ação para cancelar convites ainda não aceitos.
+
+## Papéis
+
+| Papel | O que significa |
+|---|---|
+| Proprietário | Pessoa principal da conta, com acesso administrativo |
+| Membro | Pessoa convidada para operar a loja no ShelfFlow |
+
+O proprietário não pode ser removido pela lista de membros.
+
+## Convidar um membro
+
+<Steps>
+1. Acesse **Time**.
+2. Clique em **Convidar**.
+3. Informe o e-mail da pessoa.
+4. Envie o convite.
+5. Aguarde a pessoa acessar com o código de verificação.
+</Steps>
+
+O convite expira em 3 dias. Se a pessoa não aceitar dentro desse prazo, envie um novo convite.
+
+## Cancelar convite
+
+Use **Cancelar convite** quando o e-mail foi digitado errado ou quando a pessoa não deve mais receber acesso.
+
+## Remover membro
+
+Para remover alguém da equipe, use o botão de remoção ao lado do membro. O ShelfFlow pede confirmação antes de concluir.
+
+<Aside type="caution">
+  Remova o acesso de pessoas que saíram da operação da loja. Isso reduz risco de alteração indevida em vitrines, combos, campanhas e configurações.
+</Aside>
+
+## Limite de membros
+
+Quando o limite do plano é atingido, o ShelfFlow bloqueia novos convites. Remova um membro antigo ou revise o plano se precisar ampliar o time.
+
+## Problemas comuns
+
+| Sintoma | Causa provável | Como resolver |
+|---|---|---|
+| Botão de convidar não aparece | Limite de membros atingido | Remova alguém ou revise o plano |
+| Convite não foi aceito | Convite expirado ou e-mail incorreto | Cancele e envie novamente |
+| Não consigo remover alguém | A pessoa é proprietária da conta | Defina outro processo de acesso com suporte |
+
+## Próximos passos
+
+- [Cobrança](/features/cobranca/) - confira se o plano atende ao tamanho do time.
+- [Configurações](/features/configuracoes/) - revise dados da loja e instalação.
+- [Dashboard](/features/dashboard/) - acompanhe a operação depois de liberar acessos.

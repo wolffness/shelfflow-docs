@@ -1,0 +1,71 @@
+---
+title: Aparência
+description: Ajuste a fonte, os tamanhos, o parcelamento e a prévia visual das vitrines.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+A aba **Aparência** controla como as vitrines aparecem na loja. Use essa área para alinhar fonte, hierarquia visual e parcelamento antes de publicar mudanças para os visitantes.
+
+## Antes de começar
+
+- Tenha ao menos uma vitrine com produto real para revisar a prévia.
+- Confira se a loja já está conectada e com produtos importados.
+- Use a prévia para avaliar título, preço, preço riscado e texto de parcelamento.
+- Publique apenas quando a prévia estiver coerente com o tema da loja.
+
+## O que você pode ajustar
+
+| Área | Para que serve |
+|---|---|
+| Fonte | Mantém a fonte do tema ou escolhe uma família aprovada do Google Fonts |
+| Tamanhos | Ajusta título da vitrine, nome do produto, preço, preço riscado e parcelamento |
+| Parcelamento | Define se o texto de parcelas aparece, limite de parcelas e valor mínimo |
+| Prévia | Mostra o resultado usando produto real de uma vitrine selecionada |
+
+## Importar estilo da loja
+
+Use **Importar estilo da loja** quando quiser começar a partir do visual atual do tema. O ShelfFlow puxa referências da loja e cria um rascunho.
+
+<Aside type="caution">
+  Se você já personalizou a aparência, importar o estilo da loja pode substituir os ajustes atuais. Revise a prévia antes de publicar.
+</Aside>
+
+## Ajustar e publicar
+
+<Steps>
+1. Acesse **Aparência** no menu.
+2. Escolha se a fonte deve seguir o tema ou usar uma fonte própria.
+3. Ajuste os tamanhos dos textos principais.
+4. Configure o parcelamento, se ele fizer parte da comunicação da loja.
+5. Revise a prévia com produto real.
+6. Aguarde o rascunho ser salvo.
+7. Clique em **Publicar**.
+</Steps>
+
+## Estados da página
+
+- **Publicado**: a versão visível na loja está igual ao rascunho atual.
+- **Alterações não salvas**: há ajuste local ainda sendo salvo.
+- **Rascunho salvo, não publicado**: a alteração foi salva, mas ainda não está visível para clientes.
+
+## Como saber se funcionou
+
+- A prévia no ShelfFlow mostra fonte, tamanhos e parcelamento corretos.
+- O status volta para **Publicado** depois da publicação.
+- As vitrines publicadas passam a usar o novo visual na loja.
+
+## Problemas comuns
+
+| Sintoma | Causa provável | Como resolver |
+|---|---|---|
+| A fonte não parece igual ao tema | O tema usa fonte customizada ou carregamento externo | Use fonte do tema ou selecione uma fonte próxima |
+| Parcelamento não aparece | Parcelamento desativado ou sem número mínimo de parcelas | Ative o parcelamento e revise limite e valor mínimo |
+| A prévia parece genérica | Não há vitrine com produto real disponível | Publique ou salve uma vitrine com produtos e volte à prévia |
+| Mudei algo, mas não apareceu na loja | Rascunho salvo sem publicação | Clique em **Publicar** depois de revisar |
+
+## Próximos passos
+
+- [Configurações](/features/configuracoes/) - ajuste perfil de imagem, segmento e cache.
+- [Vitrines](/features/shelves/) - revise quais vitrines usam o visual publicado.
+- [Dashboard](/features/dashboard/) - acompanhe o impacto depois da publicação.

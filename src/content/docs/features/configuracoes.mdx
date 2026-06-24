@@ -1,0 +1,97 @@
+---
+title: Configurações
+description: Revise dados da loja, preferências comerciais, instalação e cache.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+A aba **Configurações** concentra preferências da loja que afetam instalação, recomendações, imagens, badges e atualização de dados.
+
+## Informações da loja
+
+O primeiro bloco mostra dados de identificação da loja:
+
+- nome da loja;
+- domínio;
+- tema detectado;
+- status da integração atual.
+
+Use esse bloco para confirmar se você está operando a loja correta antes de publicar vitrines ou alterar instalação.
+
+## Aparência das vitrines
+
+O atalho **Aparência das vitrines** leva para os ajustes visuais. Use quando precisar mudar fonte, tamanho de texto, parcelamento ou revisar a prévia antes de publicar.
+
+## Fuso horário
+
+O fuso horário define como o ShelfFlow interpreta horários de início e fim de vitrines, combos e campanhas publicadas.
+
+<Steps>
+1. Abra **Configurações**.
+2. Vá até **Fuso horário da loja**.
+3. Escolha o fuso correto.
+4. Clique em **Salvar fuso horário**.
+</Steps>
+
+Se a loja vende para o Brasil todo, use o fuso operacional da equipe que agenda campanhas.
+
+## Segmento da loja
+
+O segmento ajuda o ShelfFlow a calibrar recomendações comerciais. As opções atuais incluem moda, beleza, casa e decoração, eletrônicos, infantil, alimentos e bebidas, pet, esportes e outdoor.
+
+Depois de salvar o segmento, as recomendações podem ser recalibradas no próximo ciclo de leitura.
+
+## Baseline comercial
+
+Clientes com recursos avançados podem importar histórico comercial para acelerar leituras iniciais. Use essa seção quando tiver CSVs de produtos e vendas exportados da plataforma.
+
+<Aside type="caution">
+  Importe apenas arquivos confiáveis e revise o status do processamento antes de usar as recomendações como base de decisão.
+</Aside>
+
+## Perfil de imagem
+
+O perfil de imagem define como as fotos são enquadradas nas vitrines. Escolha o perfil que mais combina com o catálogo:
+
+| Perfil | Quando usar |
+|---|---|
+| Vestuário | Roupas e looks completos |
+| Calçados | Sapatos e tênis em formato mais quadrado |
+| Acessórios | Bolsas, joias e peças que não devem ser cortadas |
+| Misto | Catálogos variados |
+| Proporção enviada | Quando a loja precisa respeitar a proporção original da imagem |
+
+As imagens podem levar alguns minutos para refletir o novo perfil.
+
+## Badges e coleção
+
+Use **Badges e coleção** para definir:
+
+- por quantos dias um produto deve ser considerado **Novo**;
+- qual tag identifica coleção nos cards das vitrines.
+
+Essas informações ajudam a destacar produtos novos e organizar campanhas por coleção.
+
+## Cache
+
+Use **Limpar cache** quando produtos, imagens, preços ou categorias foram atualizados na plataforma, mas ainda não aparecem no ShelfFlow.
+
+## Instalação
+
+Quando a instalação exigir artefatos manuais, a página pode oferecer:
+
+- container para gerenciador de tags;
+- código para página de finalização;
+- código para página de confirmação.
+
+Sempre faça cópia de segurança antes de importar ou colar códigos em uma plataforma externa.
+
+## Conta
+
+O bloco de conta mostra dados básicos da loja e do plano. Use como conferência rápida antes de acionar suporte ou revisar cobrança.
+
+## Próximos passos
+
+- [Aparência](/features/aparencia/) - publique o visual das vitrines.
+- [Cobrança](/features/cobranca/) - revise plano e dados fiscais.
+- [Integrações por plataforma](/platforms/nuvemshop/) - veja detalhes específicos da plataforma atualmente suportada.
