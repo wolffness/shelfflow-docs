@@ -1,87 +1,87 @@
 ---
-title: Resolucao de problemas
-description: Solucoes para os problemas mais comuns ao usar o ShelfFlow.
+title: Resolução de problemas
+description: Soluções para os problemas mais comuns ao usar o ShelfFlow.
 ---
 
 import { Aside, Steps } from '@astrojs/starlight/components';
 
-## Vitrines nao aparecem na loja
+## Vitrines não aparecem na loja
 
 ### Verifique a coleta da plataforma
 
 <Steps>
 1. Abra o guia da plataforma conectada.
-2. Confirme que o container, app ou script de coleta esta publicado.
-3. Abra a loja publicada em uma aba anonima.
-4. Volte ao ShelfFlow e confira se o status de tracking saiu de erro critico.
+2. Confirme que o container, app ou script de coleta está publicado.
+3. Abra a loja publicada em uma aba anônima.
+4. Volte ao ShelfFlow e confira se o status de tracking saiu de erro crítico.
 </Steps>
 
-### Verifique a conexao da loja
+### Verifique a conexão da loja
 
 1. Acesse o painel do ShelfFlow
 2. Confirme que sua loja aparece como **conectada**
-3. Se a loja nao aparece, reconecte a plataforma pelo fluxo de integracao
+3. Se a loja não aparece, reconecte a plataforma pelo fluxo de integração
 
 ### Verifique o tema
 
-Temas muito customizados podem exigir ajuste de posicao ou seletor CSS. Veja a pagina da sua plataforma para detalhes de compatibilidade.
+Temas muito customizados podem exigir ajuste de posição ou seletor CSS. Veja a página da sua plataforma para detalhes de compatibilidade.
 
 ## Produtos fora de ordem
 
-Se os produtos da prateleira nao estao na ordem que voce definiu:
+Se os produtos da prateleira não estão na ordem que você definiu:
 
 1. Abra a prateleira no painel do ShelfFlow
 2. Verifique a ordem dos produtos
 3. Clique em **Salvar** novamente — isso gera um novo snapshot da ordem
 
 <Aside type="tip">
-  O ShelfFlow salva um snapshot dos produtos no banco de dados para garantir a ordem. Se voce editou a prateleira antes dessa funcionalidade existir, basta salvar novamente para atualizar.
+  O ShelfFlow salva um snapshot dos produtos no banco de dados para garantir a ordem. Se você editou a prateleira antes dessa funcionalidade existir, basta salvar novamente para atualizar.
 </Aside>
 
-## Prateleira na posicao errada
+## Prateleira na posição errada
 
-1. Tente uma posicao diferente (ex: trocar "apos os destaques" por "apos o banner")
+1. Tente uma posição diferente (ex: trocar "após os destaques" por "após o banner")
 2. Use um **seletor CSS customizado** para controle preciso:
    - Abra o **Inspecionar Elemento** (F12) na homepage
-   - Encontre o elemento de referencia
+   - Encontre o elemento de referência
    - Copie o seletor CSS
    - Cole no campo "Seletor CSS customizado" da prateleira
 
-## Login nao funciona
+## Login não funciona
 
-### Botao "Enviar codigo" desabilitado
+### Botão "Enviar código" desabilitado
 
-Isso pode acontecer se o widget de verificacao (Turnstile) nao carregou. Tente:
+Isso pode acontecer se o widget de verificação (Turnstile) não carregou. Tente:
 
-1. Desabilitar extensoes de bloqueio de anuncios (uBlock, AdBlock)
+1. Desabilitar extensões de bloqueio de anúncios (uBlock, AdBlock)
 2. Limpar o cache do navegador
-3. Tentar em uma janela anonima
-4. Verificar se o navegador esta atualizado
+3. Tentar em uma janela anônima
+4. Verificar se o navegador está atualizado
 
-### Codigo OTP nao chega
+### Código OTP não chega
 
-1. Verifique a pasta de spam/lixo eletronico
-2. Confirme que o email digitado esta correto
-3. Aguarde ate 2 minutos — em horarios de pico pode haver atraso
+1. Verifique a pasta de spam/lixo eletrônico
+2. Confirme que o e-mail digitado está correto
+3. Aguarde até 2 minutos — em horários de pico pode haver atraso
 4. Tente novamente
 
-## Produtos nao carregam
+## Produtos não carregam
 
 Se a prateleira aparece mas sem produtos:
 
-1. Verifique se os produtos selecionados estao **ativos** na plataforma conectada
-2. Verifique se os produtos tem **imagens** cadastradas
-3. Se usa curadoria manual, confirme que os produtos ainda existem no catalogo
+1. Verifique se os produtos selecionados estão **ativos** na plataforma conectada
+2. Verifique se os produtos têm **imagens** cadastradas
+3. Se usa curadoria manual, confirme que os produtos ainda existem no catálogo
 4. Se usa categoria, confirme que a categoria tem produtos ativos
 
 ## Performance lenta
 
-O script do ShelfFlow tem ~3KB e carrega de forma assincrona. Se voce perceber lentidao:
+O script do ShelfFlow tem ~3KB e carrega de forma assíncrona. Se você perceber lentidão:
 
-1. Verifique se o problema nao e do proprio tema ou de outros scripts
+1. Verifique se o problema não é do próprio tema ou de outros scripts
 2. Use o [Google PageSpeed Insights](https://pagespeed.web.dev/) para diagnosticar
-3. O ShelfFlow nao deve impactar significativamente o LCP ou CLS
+3. O ShelfFlow não deve impactar significativamente o LCP ou CLS
 
 <Aside>
-  Se o problema persistir, entre em contato pelo email **contato@shelfflow.com.br** com o link da sua loja e uma descricao do problema.
+  Se o problema persistir, entre em contato pelo e-mail **contato@shelfflow.com.br** com o link da sua loja e uma descrição do problema.
 </Aside>

@@ -5,12 +5,12 @@ description: Como conectar, instalar e validar o ShelfFlow em lojas Nuvemshop.
 
 import { Aside, Steps } from '@astrojs/starlight/components';
 
-Esta pagina cobre o que e especifico da integracao com **Nuvemshop**. Para aprender os conceitos gerais do ShelfFlow, comece pela [visao geral](/getting-started/) e pelo [Quick Start](/getting-started/quick-start/).
+Esta página cobre o que é específico da integração com **Nuvemshop**. Para aprender os conceitos gerais do ShelfFlow, comece pela [visão geral](/getting-started/) e pelo [Quick Start](/getting-started/quick-start/).
 
-## Antes de comecar
+## Antes de começar
 
 - Tenha acesso de administrador a loja.
-- Confirme que voce pode autorizar aplicativos e permissoes da plataforma.
+- Confirme que você pode autorizar aplicativos e permissões da plataforma.
 - Se usar Google Tag Manager, tenha acesso ao container atual.
 - Se a loja usa tema customizado, reserve tempo para validar a vitrine publicada.
 
@@ -19,15 +19,15 @@ Esta pagina cobre o que e especifico da integracao com **Nuvemshop**. Para apren
 <Steps>
 1. **Conecte a loja**
 
-   Acesse o dashboard do ShelfFlow e confirme que a loja Nuvemshop correta esta ativa.
+   Acesse o dashboard do ShelfFlow e confirme que a loja Nuvemshop correta está ativa.
 
-2. **Escolha o caminho de instalacao**
+2. **Escolha o caminho de instalação**
 
-   Use o Google Tag Manager quando a loja ja opera com GTM. Se o setup exigir scripts diretos, siga as instrucoes mostradas no app para storefront e checkout.
+   Use o Google Tag Manager quando a loja já opera com GTM. Se o setup exigir scripts diretos, siga as instruções mostradas no app para storefront e checkout.
 
-3. **Faca backup antes de importar**
+3. **Faça backup antes de importar**
 
-   Antes de importar qualquer container, exporte o container atual do GTM. Isso permite restaurar a configuracao se algo sair diferente do esperado.
+   Antes de importar qualquer container, exporte o container atual do GTM. Isso permite restaurar a configuração se algo sair diferente do esperado.
 
 4. **Publique a coleta**
 
@@ -35,15 +35,15 @@ Esta pagina cobre o que e especifico da integracao com **Nuvemshop**. Para apren
 
 5. **Abra a loja publicada**
 
-   Acesse a loja em uma aba anonima para gerar os primeiros eventos de validacao.
+   Acesse a loja em uma aba anônima para gerar os primeiros eventos de validação.
 </Steps>
 
 ## Validar que funcionou
 
-- O status de tracking no ShelfFlow nao deve mostrar erro critico.
+- O status de tracking no ShelfFlow não deve mostrar erro crítico.
 - Uma vitrine publicada deve aparecer no storefront no local esperado.
-- Os primeiros eventos podem levar algum tempo para aparecer; `em validacao` nao significa erro por si so.
-- O Analytics deve comecar a mostrar impressoes ou cliques quando houver trafego real.
+- Os primeiros eventos podem levar algum tempo para aparecer; `em validação` não significa erro por si só.
+- O Analytics deve começar a mostrar impressões ou cliques quando houver tráfego real.
 
 <Aside type="tip">
   O guia antigo de setup detalha o fluxo Nuvemshop + GTM passo a passo: [Configurar Nuvemshop + GTM](/guides/nuvemshop-setup/).
@@ -51,16 +51,16 @@ Esta pagina cobre o que e especifico da integracao com **Nuvemshop**. Para apren
 
 ## Problemas comuns
 
-| Sintoma | Causa provavel | Como resolver |
+| Sintoma | Causa provável | Como resolver |
 |---|---|---|
-| A vitrine nao aparece | Coleta nao publicada, posicao indisponivel ou tema customizado | Revise a instalacao, publique novamente e teste outra posicao |
-| O tracking fica em validacao | Ainda nao houve evento real suficiente | Abra a loja publicada, navegue por produtos e aguarde a coleta |
-| O layout fica diferente do preview | Tema customizado ou CSS da loja | Teste outra posicao e revise compatibilidade de tema |
-| O GTM mudou algo fora do ShelfFlow | Importacao sem backup ou conflito de tags | Restaure o backup do container e importe novamente com merge |
+| A vitrine não aparece | Coleta não publicada, posição indisponível ou tema customizado | Revise a instalação, publique novamente e teste outra posição |
+| O tracking fica em validação | Ainda não houve evento real suficiente | Abra a loja publicada, navegue por produtos e aguarde a coleta |
+| O layout fica diferente do preview | Tema customizado ou CSS da loja | Teste outra posição e revise compatibilidade de tema |
+| O GTM mudou algo fora do ShelfFlow | Importação sem backup ou conflito de tags | Restaure o backup do container e importe novamente com merge |
 
-## Proximos passos
+## Próximos passos
 
-- [Quick Start](/getting-started/quick-start/) — siga a jornada geral de ativacao.
+- [Quick Start](/getting-started/quick-start/) — siga a jornada geral de ativação.
 - [Checklist de onboarding](/getting-started/onboarding-checklist/) — confira o que falta para a loja sair do zero.
 - [Vitrines](/features/shelves/) — publique a primeira vitrine.
-- [Troubleshooting](/troubleshooting/) — veja sintomas gerais de instalacao e publicacao.
+- [Troubleshooting](/troubleshooting/) — veja sintomas gerais de instalação e publicação.

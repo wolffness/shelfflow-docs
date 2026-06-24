@@ -5,45 +5,45 @@ description: Controle onde cada prateleira aparece na homepage da sua loja.
 
 import { Aside } from '@astrojs/starlight/components';
 
-O **posicionamento** define onde a vitrine sera inserida no storefront. O ShelfFlow usa pontos de insercao automaticos e seletores customizados para encontrar o lugar correto no tema da loja.
+O **posicionamento** define onde a vitrine será inserida no storefront. O ShelfFlow usa pontos de inserção automáticos e seletores customizados para encontrar o lugar correto no tema da loja.
 
-## Posicoes disponiveis
+## Posições disponíveis
 
-| Posicao | Descricao |
+| Posição | Descrição |
 |---------|-----------|
-| **Apos o banner** | Logo abaixo do slider/banner principal da homepage |
-| **Apos os destaques** | Abaixo da secao de produtos em destaque |
-| **Apos os promocionais** | Abaixo dos banners promocionais |
-| **Antes do rodape** | Na parte inferior da pagina, antes do footer |
+| **Após o banner** | Logo abaixo do slider/banner principal da homepage |
+| **Após os destaques** | Abaixo da seção de produtos em destaque |
+| **Após os promocionais** | Abaixo dos banners promocionais |
+| **Antes do rodapé** | Na parte inferior da página, antes do footer |
 
 ## Como funciona o posicionamento
 
-O ShelfFlow detecta automaticamente secoes comuns do storefront usando **seletores semanticos**. O sistema funciona em 3 camadas:
+O ShelfFlow detecta automaticamente seções comuns do storefront usando **seletores semânticos**. O sistema funciona em 3 camadas:
 
-### Camada 1: Seletores semanticos
-O ShelfFlow procura elementos conhecidos da plataforma e do tema para encontrar banners, listas de produtos, areas promocionais e rodape.
+### Camada 1: Seletores semânticos
+O ShelfFlow procura elementos conhecidos da plataforma e do tema para encontrar banners, listas de produtos, áreas promocionais e rodapé.
 
 ### Camada 2: Seletor CSS customizado
-Se voce conhece a estrutura do seu tema, pode informar um seletor CSS especifico. Esse seletor tem **prioridade** sobre os seletores automaticos.
+Se você conhece a estrutura do seu tema, pode informar um seletor CSS específico. Esse seletor tem **prioridade** sobre os seletores automáticos.
 
 ### Camada 3: Fallback
-Se nenhum seletor encontrar o elemento, a prateleira e inserida **antes do footer** como ultimo recurso.
+Se nenhum seletor encontrar o elemento, a prateleira é inserida **antes do footer** como último recurso.
 
 <Aside type="tip">
-  Na maioria dos temas suportados, a **Camada 1** funciona automaticamente. Voce so precisa do seletor customizado se usar um tema muito personalizado.
+  Na maioria dos temas suportados, a **Camada 1** funciona automaticamente. Você só precisa do seletor customizado se usar um tema muito personalizado.
 </Aside>
 
-## Metodo de insercao
+## Método de inserção
 
-Alem da posicao, voce pode escolher o **metodo de insercao**:
+Além da posição, você pode escolher o **método de inserção**:
 
-- **Depois** (padrao) — insere a prateleira logo apos o elemento de referencia
-- **Antes** — insere a prateleira logo antes do elemento de referencia
+- **Depois** (padrão) — insere a prateleira logo após o elemento de referência
+- **Antes** — insere a prateleira logo antes do elemento de referência
 
 ## Compatibilidade
 
-Compatibilidade de tema muda por plataforma. Consulte a pagina da integracao conectada para ver orientacoes especificas.
+Compatibilidade de tema muda por plataforma. Consulte a página da integração conectada para ver orientações específicas.
 
 <Aside type="caution">
-  Se o storefront foi muito customizado, valide a vitrine publicada e use seletor CSS customizado quando a posicao automatica nao encontrar o local certo.
+  Se o storefront foi muito customizado, valide a vitrine publicada e use seletor CSS customizado quando a posição automática não encontrar o local certo.
 </Aside>
