@@ -10,6 +10,8 @@ export default defineConfig({
 		'/getting-started/onboarding-checklist': '/primeiros-passos/lista-de-verificacao',
 		'/features/looks': '/features/shop-the-look',
 		'/features/billing': '/features/cobranca',
+		'/features/time': '/equipe',
+		'/features/equipe': '/equipe',
 	},
 	integrations: [
 		starlight({
@@ -32,6 +34,7 @@ export default defineConfig({
 					label: 'Funcionalidades',
 					autogenerate: { directory: 'features' },
 				},
+				{ slug: 'equipe' },
 				{
 					label: 'Integrações',
 					autogenerate: { directory: 'platforms' },
