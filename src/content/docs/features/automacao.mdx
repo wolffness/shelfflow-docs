@@ -1,0 +1,123 @@
+---
+title: Automação
+description: Entenda a otimização supervisionada da ordem dos produtos por vitrine.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+A aba **Automação** acompanha vitrines com modo autônomo ativado. Ela mostra o estado de cada vitrine, a prévia do que mudaria em um próximo ciclo e o histórico das otimizações já executadas.
+
+Use essa área para revisar o que o ShelfFlow está fazendo com base nos sinais de navegação e compra, sem perder o controle sobre pausar, retomar ou desativar a otimização.
+
+<Aside type="note">
+  A automação aparece apenas em contas com o recurso liberado. Se a aba não estiver disponível no painel, revise o plano contratado ou fale com o time responsável pela conta.
+</Aside>
+
+## Quando usar
+
+Use **Automação** quando quiser que o ShelfFlow ajuste a ordem dos produtos de uma vitrine conforme os sinais reais da loja.
+
+Ela é indicada para vitrines que já recebem tráfego e têm produtos suficientes para comparação, como:
+
+- mais vendidos;
+- novidades com giro recorrente;
+- categorias fortes;
+- campanhas sazonais;
+- seleções comerciais que precisam de revisão frequente.
+
+## Antes de ativar
+
+Antes de ligar o modo autônomo em uma vitrine, confira:
+
+- a vitrine está publicada ou pronta para publicação;
+- a coleta de eventos está saudável;
+- os produtos têm imagens, preço e estoque revisados;
+- a vitrine tem volume mínimo de impressões, cliques, carrinhos ou compras;
+- a ordem manual atual pode ser usada como referência caso a automação seja desativada.
+
+<Aside type="tip">
+  A automação funciona melhor quando a vitrine já tem dados suficientes para comparar produtos. Em vitrines novas, o ShelfFlow pode entrar primeiro em aprendizado.
+</Aside>
+
+## Estados da automação
+
+Cada vitrine autônoma pode aparecer em um destes estados:
+
+| Estado | O que significa |
+|--------|-----------------|
+| **Aprendendo** | O ShelfFlow está coletando sinais. A ordem dos produtos ainda não muda. |
+| **Ativo** | A vitrine pode receber ciclos de otimização automaticamente. |
+| **Pausado** | A ordem atual fica congelada até a automação ser retomada. |
+| **Desligado** | A vitrine não aparece na aba Automação. |
+
+## Ativar uma vitrine
+
+<Steps>
+1. Abra **Vitrines** no painel.
+2. Escolha a vitrine que deve ser otimizada.
+3. Clique para ativar o modo autônomo.
+4. Acompanhe a vitrine na aba **Automação**.
+5. Revise o estado, a prévia e os ciclos conforme os dados chegam.
+</Steps>
+
+Ao ativar, o ShelfFlow pode ir para **Aprendendo** ou direto para **Ativo**, dependendo dos dados disponíveis. A ativação autoriza a otimização automática quando os critérios mínimos forem atingidos.
+
+## Prévia de mudanças
+
+Em vitrines **Ativas** ou **Pausadas**, a seção de prévia mostra o que aconteceria se o ciclo rodasse naquele momento.
+
+A prévia pode indicar:
+
+- produtos que subiriam de posição;
+- produtos que desceriam de posição;
+- produtos que permaneceriam no lugar;
+- entradas ou saídas quando aplicável ao tipo de vitrine.
+
+Se a prévia mostrar **Sem mudanças**, significa que o ShelfFlow não encontrou um ajuste melhor naquele momento ou que as regras de proteção impediram alterações.
+
+## Histórico de ciclos
+
+O **Histórico de ciclos** mostra as otimizações registradas para a vitrine, com os movimentos feitos em cada execução.
+
+Use o histórico para entender:
+
+- quando a vitrine foi otimizada;
+- quais produtos mudaram de posição;
+- quantas mudanças ocorreram no ciclo;
+- se os ciclos estão rodando sem alteração relevante.
+
+## Pausar, retomar e desativar
+
+Use os controles da própria aba para administrar cada vitrine:
+
+- **Pausar** interrompe novos ciclos e mantém a ordem atual.
+- **Retomar** libera a vitrine para voltar a otimizar.
+- **Desativar** desliga o modo autônomo e restaura a ordem manual original quando ela estiver disponível.
+
+<Aside type="caution">
+  Ao desativar durante o aprendizado, o aprendizado coletado até aquele momento é descartado. A vitrine pode ser ativada novamente depois, mas começará um novo ciclo de aprendizado.
+</Aside>
+
+## Relação com Inteligência e Relatórios
+
+A **Inteligência** ajuda a identificar oportunidades, padrões de demanda e histórico de decisões. A **Automação** usa esse contexto para operar vitrines que foram liberadas para otimização.
+
+Os **Relatórios** continuam sendo a leitura principal para acompanhar desempenho por vitrine, produto, categoria e período. Use-os para validar se uma vitrine automatizada está gerando mais cliques, carrinhos ou compras influenciadas.
+
+## Problemas comuns
+
+| Situação | O que verificar |
+|----------|-----------------|
+| A aba não aparece | O recurso pode não estar liberado para a conta. |
+| Nenhuma vitrine aparece | Ative o modo autônomo em uma vitrine primeiro. |
+| A vitrine está aprendendo há muito tempo | Pode faltar volume de eventos ou pedidos para uma decisão confiável. |
+| A prévia não mostra mudanças | A ordem atual pode estar adequada ou as regras de proteção podem ter bloqueado alterações. |
+| A vitrine está pausada | Use **Retomar** para liberar novos ciclos. |
+| Quero voltar ao manual | Use **Desativar** para restaurar a ordem manual original quando disponível. |
+
+## Próximos passos
+
+- [Vitrines](/features/shelves/) - ative o modo autônomo em uma vitrine.
+- [Dashboard](/features/dashboard/) - acompanhe ações e mudanças recentes.
+- [Inteligência](/features/intelligence/) - revise oportunidades e histórico.
+- [Relatórios](/features/analytics/) - valide o impacto das vitrines automatizadas.
