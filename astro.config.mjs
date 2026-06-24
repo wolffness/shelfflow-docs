@@ -4,6 +4,11 @@ import starlight from '@astrojs/starlight';
 
 export default defineConfig({
 	site: 'https://docs.shelfflow.com.br',
+	redirects: {
+		'/getting-started': '/primeiros-passos',
+		'/getting-started/quick-start': '/primeiros-passos/guia-rapido',
+		'/getting-started/onboarding-checklist': '/primeiros-passos/lista-de-verificacao',
+	},
 	integrations: [
 		starlight({
 			title: 'ShelfFlow',
@@ -18,8 +23,8 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Começando',
-					autogenerate: { directory: 'getting-started' },
+					label: 'Primeiros passos',
+					autogenerate: { directory: 'primeiros-passos' },
 				},
 				{
 					label: 'Funcionalidades',

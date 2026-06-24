@@ -1,52 +1,52 @@
 ---
-title: Analytics
-description: Acompanhe impressões, cliques e CTR das suas prateleiras e produtos.
+title: Relatórios
+description: Acompanhe impressões, cliques e taxa de cliques das suas prateleiras e produtos.
 ---
 
 import { Aside } from '@astrojs/starlight/components';
 
-O **dashboard de analytics** do ShelfFlow mostra como suas prateleiras estão performando. Você acompanha métricas por prateleira e por produto individual.
+O **painel de relatórios** do ShelfFlow mostra como suas prateleiras estão desempenhando. Você acompanha métricas por prateleira e por produto individual.
 
 ## Métricas disponíveis
 
 ### Por prateleira
-- **Impressões** — Quantas vezes a prateleira foi exibida na homepage
+- **Impressões** — Quantas vezes a prateleira foi exibida na página inicial
 - **Cliques** — Quantas vezes um produto da prateleira foi clicado
-- **CTR** — Taxa de cliques (cliques / impressões)
+- **Taxa de cliques (CTR)** — Relação entre cliques e impressões
 
 ### Por produto
 Dentro de cada prateleira, você pode expandir para ver as métricas individuais de cada produto:
 - Impressões do produto
 - Cliques no produto
-- CTR individual
+- Taxa de cliques individual
 - Imagem do produto (puxada da plataforma conectada)
 
 ## Como acessar
 
-O analytics está disponível no **dashboard** do ShelfFlow:
+Os relatórios estão disponíveis no **painel** do ShelfFlow:
 
-1. Acesse [shelfflow.com.br/dashboard](https://shelfflow.com.br/dashboard)
-2. Faça login com seu e-mail
-3. Na página inicial, você ve o **resumo geral** (total de impressões, cliques, CTR)
+1. Acesse o [painel do ShelfFlow](https://shelfflow.com.br/dashboard)
+2. Acesse com seu e-mail
+3. Na página inicial, você vê o **resumo geral** (total de impressões, cliques e taxa de cliques)
 4. Abaixo, a lista de prateleiras com suas métricas
 5. Clique em uma prateleira para expandir e ver os **produtos individuais**
 
 ## Interpretando os dados
 
-| CTR | Interpretação | Ação sugerida |
+| Taxa de cliques | Interpretação | Ação sugerida |
 |-----|--------------|---------------|
 | > 5% | Excelente | Manter a prateleira como está |
 | 2-5% | Bom | Testar novos produtos ou posição |
 | < 2% | Baixo | Rever produtos, título ou posicionamento |
 
 <Aside type="tip">
-  O **posicionamento** da prateleira na homepage tem grande impacto no CTR. Prateleiras "após o banner" geralmente têm mais visibilidade do que "antes do rodapé".
+  O **posicionamento** da prateleira na página inicial tem grande impacto na taxa de cliques. Prateleiras "após o banner" geralmente têm mais visibilidade do que "antes do rodapé".
 </Aside>
 
 ## Período de dados
 
-Os dados de analytics são acumulados desde a instalação. Atualmente, os dados são exibidos como **totais acumulados** (all-time).
+Os dados dos relatórios são acumulados desde a instalação. Atualmente, os dados são exibidos como **totais acumulados**.
 
 <Aside>
-  Em versões futuras, planejamos adicionar filtros por período (7 dias, 30 dias, customizado) e gráficos de tendência.
+  Em versões futuras, planejamos adicionar filtros por período (7 dias, 30 dias, personalizado) e gráficos de tendência.
 </Aside>
