@@ -8,6 +8,7 @@ export default defineConfig({
 		'/getting-started': '/primeiros-passos',
 		'/getting-started/quick-start': '/primeiros-passos/guia-rapido',
 		'/getting-started/onboarding-checklist': '/primeiros-passos/lista-de-verificacao',
+		'/features/looks': '/features/shop-the-look',
 	},
 	integrations: [
 		starlight({
