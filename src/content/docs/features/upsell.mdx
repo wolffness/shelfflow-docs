@@ -1,0 +1,68 @@
+---
+title: Upsell
+description: Crie campanhas para sugerir produtos no carrinho conforme o contexto da compra.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+**Upsell** permite sugerir produtos no carrinho com base no contexto da compra. Use campanhas para recomendar complementos, kits ou produtos relacionados antes do cliente finalizar o pedido.
+
+## Antes de comecar
+
+- Upsell fica no plano Shelf+ durante o pre-lancamento.
+- A loja precisa ter produtos importados no ShelfFlow.
+- A campanha precisa de gatilho, oferta e preview revisado antes de publicar.
+- Desconto real depende de capability de desconto confirmada para a loja.
+
+## Quando usar
+
+- Sugerir complemento para produto ou categoria no carrinho.
+- Aumentar ticket medio com produtos de menor friccao.
+- Promover kits ou combinacoes que ja fazem sentido comercial.
+- Destacar produtos com boa margem ou estoque forte.
+
+## Criar uma campanha
+
+<Steps>
+1. Acesse **Upsell** no dashboard.
+2. Clique para criar uma nova campanha.
+3. Escolha o gatilho: produto, categoria, valor do carrinho ou regra disponivel.
+4. Defina quais produtos serao sugeridos.
+5. Configure beneficio, copy e aparencia.
+6. Revise a previa no carrinho.
+7. Confira as verificacoes finais.
+8. Clique em **Publicar campanha**.
+</Steps>
+
+## Como saber se funcionou
+
+- A campanha aparece na lista de Upsell.
+- O status indica que ela foi publicada ou ficou como rascunho com pendencia clara.
+- A previa usa produtos reais escolhidos na campanha.
+- Quando o carrinho atende ao gatilho, a oferta fica elegivel para aparecer.
+
+<Aside type="caution">
+  Nao comunique desconto como garantido se a loja ainda nao tem desconto real validado no checkout. Nesses casos, trate a oferta como recomendacao de produto.
+</Aside>
+
+## Ajustes comuns
+
+- Use gatilhos por categoria quando muitos produtos devem ativar a mesma oferta.
+- Use produtos especificos quando a campanha depende de um item principal.
+- Revise o preview sempre que trocar os produtos sugeridos.
+- Pausar uma campanha e melhor do que apagar quando voce quer preservar historico.
+
+## Problemas comuns
+
+| Sintoma | Causa provavel | Como resolver |
+|---|---|---|
+| Campanha nao aparece no carrinho | Gatilho nao atendido ou campanha em rascunho | Revise regra, status e preview |
+| Preview mostra produto inesperado | Produto sugerido antigo ou selecao incompleta | Volte ao passo de produtos e salve novamente |
+| Desconto nao aplica | Capability de desconto ausente ou regra nao confirmada | Verifique o estado de desconto antes de prometer economia |
+| Publicacao volta para estado vazio | Campanha nao foi persistida ou houve erro de refresh | Recarregue a tela e confira a lista antes de recriar |
+
+## Proximos passos
+
+- [Combos](/features/combos/) — use combinacoes como base comercial.
+- [Analytics](/features/analytics/) — acompanhe impacto depois da publicacao.
+- [Planos e cobranca](/features/billing/) — revise o acesso ao Shelf+.

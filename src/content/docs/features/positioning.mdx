@@ -5,7 +5,7 @@ description: Controle onde cada prateleira aparece na homepage da sua loja.
 
 import { Aside } from '@astrojs/starlight/components';
 
-O **posicionamento** define onde a prateleira sera inserida na homepage. O ShelfFlow usa um sistema inteligente de 3 camadas para encontrar o ponto de insercao correto em qualquer tema Nuvemshop.
+O **posicionamento** define onde a vitrine sera inserida no storefront. O ShelfFlow usa pontos de insercao automaticos e seletores customizados para encontrar o lugar correto no tema da loja.
 
 ## Posicoes disponiveis
 
@@ -18,10 +18,10 @@ O **posicionamento** define onde a prateleira sera inserida na homepage. O Shelf
 
 ## Como funciona o posicionamento
 
-O ShelfFlow detecta automaticamente as secoes da homepage do seu tema usando **seletores semanticos**. O sistema funciona em 3 camadas:
+O ShelfFlow detecta automaticamente secoes comuns do storefront usando **seletores semanticos**. O sistema funciona em 3 camadas:
 
 ### Camada 1: Seletores semanticos
-O ShelfFlow conhece a estrutura HTML dos temas classicos da Nuvemshop. Ele procura elementos como `[data-store="home-slider"]`, `.featured-products`, etc.
+O ShelfFlow procura elementos conhecidos da plataforma e do tema para encontrar banners, listas de produtos, areas promocionais e rodape.
 
 ### Camada 2: Seletor CSS customizado
 Se voce conhece a estrutura do seu tema, pode informar um seletor CSS especifico. Esse seletor tem **prioridade** sobre os seletores automaticos.
@@ -30,7 +30,7 @@ Se voce conhece a estrutura do seu tema, pode informar um seletor CSS especifico
 Se nenhum seletor encontrar o elemento, a prateleira e inserida **antes do footer** como ultimo recurso.
 
 <Aside type="tip">
-  Na maioria dos temas classicos, a **Camada 1** funciona automaticamente. Voce so precisa do seletor customizado se usar um tema muito personalizado.
+  Na maioria dos temas suportados, a **Camada 1** funciona automaticamente. Voce so precisa do seletor customizado se usar um tema muito personalizado.
 </Aside>
 
 ## Metodo de insercao
@@ -40,12 +40,10 @@ Alem da posicao, voce pode escolher o **metodo de insercao**:
 - **Depois** (padrao) — insere a prateleira logo apos o elemento de referencia
 - **Antes** — insere a prateleira logo antes do elemento de referencia
 
-## Temas compativeis
+## Compatibilidade
 
-O posicionamento automatico foi testado e validado em todos os **11 temas classicos** da Nuvemshop:
-
-Amazonas, Brasilia, Cali, Lima, Morelia, Recife, Rio, Toluca, Simple, Trend e Jeronimo.
+Compatibilidade de tema muda por plataforma. Consulte a pagina da integracao conectada para ver orientacoes especificas.
 
 <Aside type="caution">
-  O tema **Patagonia** (NubeSDK/Next.js) usa uma arquitetura diferente e ainda nao e suportado. Compatibilidade planejada para versao futura.
+  Se o storefront foi muito customizado, valide a vitrine publicada e use seletor CSS customizado quando a posicao automatica nao encontrar o local certo.
 </Aside>

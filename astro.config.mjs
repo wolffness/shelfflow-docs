@@ -26,6 +26,10 @@ export default defineConfig({
 					autogenerate: { directory: 'features' },
 				},
 				{
+					label: 'Integracoes',
+					autogenerate: { directory: 'platforms' },
+				},
+				{
 					label: 'Guias Praticos',
 					autogenerate: { directory: 'guides' },
 				},

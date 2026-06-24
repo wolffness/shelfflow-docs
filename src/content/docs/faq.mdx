@@ -9,15 +9,15 @@ import { Aside } from '@astrojs/starlight/components';
 
 ### O que e o ShelfFlow?
 
-O ShelfFlow e um app para Nuvemshop que permite criar vitrines de produtos na homepage, acompanhar resultados com analytics e usar inteligencia comercial para decidir o que destacar.
+O ShelfFlow e uma plataforma para lojas online criarem vitrines, combinacoes de produtos, looks compraveis e campanhas de upsell, com analytics e inteligencia comercial para decidir o que destacar.
 
 ### Preciso saber programar?
 
-Nao. Tudo e configurado pelo painel do ShelfFlow, sem mexer no codigo do tema. A configuracao tecnica principal e instalar a coleta via Google Tag Manager ou scripts orientados pelo app.
+Nao. Tudo e configurado pelo painel do ShelfFlow. A parte tecnica e conectar a plataforma e instalar a coleta seguindo o guia da integracao usada pela loja.
 
-### Funciona em qualquer tema da Nuvemshop?
+### Funciona em qualquer tema ou storefront?
 
-Funciona em todos os **11 temas classicos**: Amazonas, Brasilia, Cali, Lima, Morelia, Recife, Rio, Toluca, Simple, Trend e Jeronimo. O tema Patagonia (NubeSDK) ainda nao e suportado.
+Depende da plataforma e do tema. Em geral, o ShelfFlow usa pontos de insercao do storefront e pode usar seletores customizados quando o tema e muito personalizado. Veja a pagina da sua integracao para detalhes de compatibilidade.
 
 ### O ShelfFlow deixa minha loja lenta?
 
@@ -51,13 +51,13 @@ Nao. Seus dados de configuracao e historico operacional ficam salvos por um peri
 
 ## Tecnico
 
-### Por que usar GTM e nao Script Tags?
+### Qual e o melhor metodo de instalacao?
 
-O Google Tag Manager oferece mais controle e nao sofre com cache de CDN. Voce pode ativar/desativar a tag sem precisar tocar no codigo do tema, e o ShelfFlow funciona imediatamente apos a publicacao no GTM.
+Depende da plataforma. Quando ha gerenciador de tags, ele costuma facilitar backup, publicacao e reversao. Quando a plataforma exige script direto, siga os passos mostrados pelo ShelfFlow para storefront e checkout.
 
-### Posso usar o ShelfFlow sem GTM?
+### Posso usar o ShelfFlow sem gerenciador de tags?
 
-Sim. GTM e o metodo recomendado, mas o ShelfFlow tambem pode orientar scripts para checkout e confirmacao de compra quando esse caminho fizer mais sentido.
+Sim, quando a plataforma suportar instalacao por scripts. O importante e instalar a coleta nos pontos certos e validar eventos reais depois.
 
 ### O ShelfFlow acessa dados dos meus clientes?
 
@@ -68,5 +68,5 @@ O ShelfFlow usa dados da loja necessarios para criar vitrines e medir resultado:
 O tracking registra **impressoes**, **cliques**, **adicionar ao carrinho** e sinais de compra quando disponiveis. Esses dados sao agregados e exibidos no dashboard para mostrar desempenho por vitrine, categoria, dispositivo e periodo.
 
 <Aside type="tip">
-  Tem uma duvida que nao esta aqui? Entre em contato pelo email **contato@eikonikos.com**.
+  Tem uma duvida que nao esta aqui? Entre em contato pelo email **contato@shelfflow.com.br**.
 </Aside>

@@ -5,26 +5,26 @@ description: Solucoes para os problemas mais comuns ao usar o ShelfFlow.
 
 import { Aside, Steps } from '@astrojs/starlight/components';
 
-## Prateleiras nao aparecem na loja
+## Vitrines nao aparecem na loja
 
-### Verifique o GTM
+### Verifique a coleta da plataforma
 
 <Steps>
-1. Acesse o Google Tag Manager
-2. Confirme que a tag do ShelfFlow esta **publicada** (nao so salva — e preciso clicar "Enviar")
-3. Use o **modo preview** do GTM para verificar se a tag esta disparando na homepage
-4. Verifique se o script colado no GTM e o mesmo fornecido no onboarding
+1. Abra o guia da plataforma conectada.
+2. Confirme que o container, app ou script de coleta esta publicado.
+3. Abra a loja publicada em uma aba anonima.
+4. Volte ao ShelfFlow e confira se o status de tracking saiu de erro critico.
 </Steps>
 
 ### Verifique a conexao da loja
 
 1. Acesse o painel do ShelfFlow
 2. Confirme que sua loja aparece como **conectada**
-3. Se a loja nao aparece, reconecte via **Instalar na Nuvemshop**
+3. Se a loja nao aparece, reconecte a plataforma pelo fluxo de integracao
 
 ### Verifique o tema
 
-O ShelfFlow funciona em temas classicos da Nuvemshop. Se voce usa o tema **Patagonia**, ele ainda nao e suportado.
+Temas muito customizados podem exigir ajuste de posicao ou seletor CSS. Veja a pagina da sua plataforma para detalhes de compatibilidade.
 
 ## Produtos fora de ordem
 
@@ -69,7 +69,7 @@ Isso pode acontecer se o widget de verificacao (Turnstile) nao carregou. Tente:
 
 Se a prateleira aparece mas sem produtos:
 
-1. Verifique se os produtos selecionados estao **ativos** na Nuvemshop
+1. Verifique se os produtos selecionados estao **ativos** na plataforma conectada
 2. Verifique se os produtos tem **imagens** cadastradas
 3. Se usa curadoria manual, confirme que os produtos ainda existem no catalogo
 4. Se usa categoria, confirme que a categoria tem produtos ativos
@@ -83,5 +83,5 @@ O script do ShelfFlow tem ~3KB e carrega de forma assincrona. Se voce perceber l
 3. O ShelfFlow nao deve impactar significativamente o LCP ou CLS
 
 <Aside>
-  Se o problema persistir, entre em contato pelo email **contato@eikonikos.com** com o link da sua loja e uma descricao do problema.
+  Se o problema persistir, entre em contato pelo email **contato@shelfflow.com.br** com o link da sua loja e uma descricao do problema.
 </Aside>

@@ -1,0 +1,68 @@
+---
+title: Combos
+description: Crie combinacoes de produtos para cross-sell e acompanhe o impacto comercial.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+**Combos** ajudam a mostrar produtos que fazem sentido juntos. Use esse modulo para sugerir combinacoes no storefront, revisar oportunidades de cross-sell e acompanhar o impacto comercial dessas combinacoes.
+
+## Antes de comecar
+
+- A loja precisa ter produtos importados no ShelfFlow.
+- A coleta deve estar instalada para que o app aprenda quais produtos recebem atencao juntos.
+- Para publicar, confira se os produtos escolhidos estao disponiveis e fazem sentido como conjunto.
+- Se a tela aparecer bloqueada, veja o plano indicado no dashboard antes de criar o combo.
+
+## Quando usar
+
+- Produtos comprados ou vistos juntos com frequencia.
+- Categorias que dependem de complemento, como roupa + acessorio.
+- Lancamentos que precisam de uma composicao pronta.
+- Campanhas em que voce quer aumentar o ticket medio sem trocar o catalogo.
+
+## Criar um combo manual
+
+<Steps>
+1. Acesse **Combos** no dashboard.
+2. Clique em **Criar combo**.
+3. Escolha **Manual**.
+4. Selecione de 2 a 5 produtos.
+5. Escolha onde o combo deve aparecer.
+6. Revise nomes, produtos e preview.
+7. Clique em **Publicar** quando estiver pronto.
+</Steps>
+
+## Usar sugestoes
+
+Quando houver dados suficientes, o ShelfFlow mostra sugestoes de produtos que aparecem juntos em carrinhos, pedidos ou sinais de navegacao. Revise a sugestao antes de publicar:
+
+- confira se os produtos ainda estao disponiveis;
+- veja se o conjunto faz sentido para o cliente;
+- evite publicar combinacoes redundantes;
+- acompanhe receita influenciada depois da publicacao.
+
+## Como saber se funcionou
+
+- O combo aparece como publicado no dashboard.
+- O bloco aparece na superficie escolhida da loja.
+- O Analytics comeca a atribuir impressoes, cliques e receita influenciada quando houver trafego.
+
+<Aside type="caution">
+  So use economia numerica ou desconto visual quando houver desconto real validado no checkout. Se a loja ainda nao tem capability de desconto, trate o combo como recomendacao de produtos, nao como promocao.
+</Aside>
+
+## Problemas comuns
+
+| Sintoma | Causa provavel | Como resolver |
+|---|---|---|
+| Nao consigo publicar | Menos de 2 produtos ou produto indisponivel | Revise a selecao e escolha produtos ativos |
+| Combo publicado nao aparece | Superficie sem suporte, tema customizado ou coleta pendente | Valide instalacao e teste outra superficie |
+| Sem receita atribuida | Ainda nao houve interacao ou pedido depois da publicacao | Aguarde trafego real e acompanhe Analytics |
+| Sugestao parece fraca | Pouco volume ou contexto comercial diferente | Use modo manual ou ignore a sugestao |
+
+## Proximos passos
+
+- [Vitrines](/features/shelves/) — combine combos com vitrines principais.
+- [Analytics](/features/analytics/) — acompanhe os primeiros sinais.
+- [Looks](/features/looks/) — transforme uma combinacao em uma foto editorial compravel.

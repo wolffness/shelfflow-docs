@@ -1,0 +1,66 @@
+---
+title: Nuvemshop
+description: Como conectar, instalar e validar o ShelfFlow em lojas Nuvemshop.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Esta pagina cobre o que e especifico da integracao com **Nuvemshop**. Para aprender os conceitos gerais do ShelfFlow, comece pela [visao geral](/getting-started/) e pelo [Quick Start](/getting-started/quick-start/).
+
+## Antes de comecar
+
+- Tenha acesso de administrador a loja.
+- Confirme que voce pode autorizar aplicativos e permissoes da plataforma.
+- Se usar Google Tag Manager, tenha acesso ao container atual.
+- Se a loja usa tema customizado, reserve tempo para validar a vitrine publicada.
+
+## Instalar a coleta
+
+<Steps>
+1. **Conecte a loja**
+
+   Acesse o dashboard do ShelfFlow e confirme que a loja Nuvemshop correta esta ativa.
+
+2. **Escolha o caminho de instalacao**
+
+   Use o Google Tag Manager quando a loja ja opera com GTM. Se o setup exigir scripts diretos, siga as instrucoes mostradas no app para storefront e checkout.
+
+3. **Faca backup antes de importar**
+
+   Antes de importar qualquer container, exporte o container atual do GTM. Isso permite restaurar a configuracao se algo sair diferente do esperado.
+
+4. **Publique a coleta**
+
+   Importe o container ou publique os scripts conforme o caminho escolhido.
+
+5. **Abra a loja publicada**
+
+   Acesse a loja em uma aba anonima para gerar os primeiros eventos de validacao.
+</Steps>
+
+## Validar que funcionou
+
+- O status de tracking no ShelfFlow nao deve mostrar erro critico.
+- Uma vitrine publicada deve aparecer no storefront no local esperado.
+- Os primeiros eventos podem levar algum tempo para aparecer; `em validacao` nao significa erro por si so.
+- O Analytics deve comecar a mostrar impressoes ou cliques quando houver trafego real.
+
+<Aside type="tip">
+  O guia antigo de setup detalha o fluxo Nuvemshop + GTM passo a passo: [Configurar Nuvemshop + GTM](/guides/nuvemshop-setup/).
+</Aside>
+
+## Problemas comuns
+
+| Sintoma | Causa provavel | Como resolver |
+|---|---|---|
+| A vitrine nao aparece | Coleta nao publicada, posicao indisponivel ou tema customizado | Revise a instalacao, publique novamente e teste outra posicao |
+| O tracking fica em validacao | Ainda nao houve evento real suficiente | Abra a loja publicada, navegue por produtos e aguarde a coleta |
+| O layout fica diferente do preview | Tema customizado ou CSS da loja | Teste outra posicao e revise compatibilidade de tema |
+| O GTM mudou algo fora do ShelfFlow | Importacao sem backup ou conflito de tags | Restaure o backup do container e importe novamente com merge |
+
+## Proximos passos
+
+- [Quick Start](/getting-started/quick-start/) — siga a jornada geral de ativacao.
+- [Checklist de onboarding](/getting-started/onboarding-checklist/) — confira o que falta para a loja sair do zero.
+- [Vitrines](/features/shelves/) — publique a primeira vitrine.
+- [Troubleshooting](/troubleshooting/) — veja sintomas gerais de instalacao e publicacao.
