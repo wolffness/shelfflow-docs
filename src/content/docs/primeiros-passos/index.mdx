@@ -1,13 +1,15 @@
 ---
 title: Visão geral
-description: Conheça o ShelfFlow e o caminho para publicar a primeira vitrine com coleta de eventos e leitura comercial.
+description: Conheça o ShelfFlow e o caminho recomendado para ativar a loja, publicar a primeira superfície comercial e acompanhar os primeiros sinais.
 ---
 
 import { Card, CardGrid, Steps, Aside } from '@astrojs/starlight/components';
 
-O **ShelfFlow** ajuda lojas online a montar vitrines de produtos, medir o que acontece nelas e transformar esses sinais em decisões comerciais.
+O **ShelfFlow** ajuda lojas online a montar superfícies comerciais de produtos, medir o que acontece nelas e transformar esses sinais em decisões de merchandising.
 
-Com ele, você pode criar vitrines na loja, acompanhar impressões, cliques, carrinhos e vendas atribuídas, além de usar a Inteligência para entender o que vende por categoria, tamanho, cor e faixa de preço.
+Com ele, você pode criar vitrines, combos, Shop the Look e campanhas de upsell, acompanhar impressões, cliques, carrinhos e vendas atribuídas, além de usar a Inteligência para entender o que vende por categoria, tamanho, cor e faixa de preço.
+
+Hoje a integração documentada é com a **Nuvemshop**. A arquitetura do ShelfFlow é preparada para evoluir para outras plataformas, mas este guia parte do fluxo Nuvemshop + Google Tag Manager.
 
 ## O caminho recomendado
 
@@ -16,32 +18,36 @@ Com ele, você pode criar vitrines na loja, acompanhar impressões, cliques, car
 
    Acesse o ShelfFlow com o e-mail da sua loja e confirme o código de verificação.
 
-2. **Complete as preferências**
+2. **Complete as preferências da loja**
 
-   Informe segmento, perfil visual e objetivo comercial. Isso ajuda o aplicativo a calibrar categorias, imagens e oportunidades.
+   Informe segmento, perfil visual, objetivo comercial e preferências de imagem. Isso ajuda o aplicativo a calibrar categorias, oportunidades e recomendações.
 
-3. **Instale a coleta da sua plataforma**
+3. **Instale a coleta Nuvemshop + GTM**
 
-   Siga o guia da sua plataforma para instalar a coleta de eventos na loja e na finalização de compra.
+   Siga o guia da plataforma para instalar o script do ShelfFlow na loja e validar a coleta de eventos na navegação, carrinho e finalização de compra.
 
-4. **Publique a primeira vitrine**
+4. **Publique a primeira superfície comercial**
 
-   Comece com uma vitrine simples: mais vendidos, novidades, uma categoria forte ou uma seleção manual.
+   Comece com uma vitrine simples, um combo de produtos, uma foto Shop the Look ou uma campanha de upsell com escopo controlado.
 
 5. **Leia os primeiros sinais**
 
-   Confira se a coleta está saudável e acompanhe Relatórios e Inteligência conforme os dados chegam.
+   Confira se a coleta está saudável e acompanhe Relatórios, Dashboard e Inteligência conforme os dados chegam.
+
+6. **Ajuste com base nos dados**
+
+   Use cliques, carrinhos, vendas atribuídas e sugestões do ShelfFlow para trocar produtos, reposicionar vitrines ou testar uma nova superfície.
 </Steps>
 
 <Aside type="tip">
-  No Shelf+, você também pode agendar uma chamada de ativação personalizada para revisar a loja, validar a coleta e escolher a primeira vitrine.
+  No Shelf+, você também pode agendar uma chamada de ativação personalizada para revisar a loja, validar a coleta e escolher a primeira superfície comercial.
 </Aside>
 
 ## O que o ShelfFlow entrega
 
 <CardGrid>
   <Card title="Dashboard" icon="rocket">
-    Veja os primeiros sinais, ações detectadas e mudanças desde a visita anterior.
+    Veja sinais recentes, ações detectadas, status da coleta e mudanças desde a visita anterior.
   </Card>
   <Card title="Vitrines" icon="pencil">
     Crie vitrines com produtos escolhidos, posição definida e visual integrado à loja.
@@ -56,7 +62,7 @@ Com ele, você pode criar vitrines na loja, acompanhar impressões, cliques, car
     Sugira produtos no carrinho conforme contexto, gatilhos e regras da campanha.
   </Card>
   <Card title="Coleta de eventos" icon="setting">
-    Instale a coleta para medir impressões, cliques, carrinhos e vendas atribuídas.
+    Instale e valide a coleta para medir impressões, cliques, carrinhos e vendas atribuídas.
   </Card>
   <Card title="Relatórios" icon="rocket">
     Compare desempenho por vitrine, categoria, dispositivo e período.
@@ -71,7 +77,7 @@ Com ele, você pode criar vitrines na loja, acompanhar impressões, cliques, car
     Ajuste fonte, tamanhos, parcelamento e prévia visual das vitrines.
   </Card>
   <Card title="Configurações" icon="setting">
-    Revise dados da loja, fuso horário, perfil de imagem, badges e instalação.
+    Revise dados da loja, fuso horário, perfil de imagem, badges, instalação e saúde da coleta.
   </Card>
   <Card title="Cobrança" icon="rocket">
     Gerencie plano, assinatura e dados fiscais.
@@ -85,7 +91,7 @@ Com ele, você pode criar vitrines na loja, acompanhar impressões, cliques, car
 
 - [Guia rápido](/primeiros-passos/guia-rapido/) — configure o fluxo inicial.
 - [Lista de verificação da ativação](/primeiros-passos/lista-de-verificacao/) — veja o que precisa estar pronto.
-- [Integrações por plataforma](/platforms/nuvemshop/) — configure a plataforma atualmente suportada.
+- [Nuvemshop](/platforms/nuvemshop/) — configure a plataforma atualmente suportada.
 - [Dashboard](/features/dashboard/) — acompanhe sinais, ações e próximos passos.
 - [Criar vitrines](/features/shelves/) — monte a primeira vitrine.
 - [Combos](/features/combos/) — publique combinações de produtos.
@@ -98,3 +104,5 @@ Com ele, você pode criar vitrines na loja, acompanhar impressões, cliques, car
 - [Configurações](/features/configuracoes/) — ajuste loja, instalação e preferências.
 - [Cobrança](/features/cobranca/) — revise plano e dados fiscais.
 - [Equipe](/equipe/) — convide quem opera a loja.
+
+Precisa de ajuda na ativação? Escreva para [contato@shelfflow.com.br](mailto:contato@shelfflow.com.br).
