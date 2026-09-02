@@ -1,0 +1,60 @@
+---
+title: Grade furada
+description: Defina quando produtos com variações esgotadas deixam de entrar em vitrines e combos.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+A regra de **grade furada** evita que vitrines e combos incluam produtos com poucas
+opções disponíveis. Ela considera somente variações cujo estoque é controlado pela
+plataforma.
+
+## Escolha o modo
+
+O ShelfFlow oferece dois modos:
+
+| Modo | Como funciona | Exemplo |
+|---|---|---|
+| Percentual | O produto é considerado com grade furada quando a porcentagem de variações esgotadas ultrapassa o limite. | Com limite de 30%, um produto com 8 variações fura com 3 esgotadas. |
+| Quantidade de variações | O produto é considerado com grade furada quando tem menos variações disponíveis que o mínimo definido. | Com mínimo 3, o produto precisa ter pelo menos 3 variações disponíveis. |
+
+<Aside type="note">
+  No modo percentual, **0% é um limite ativo**: qualquer variação esgotada faz o
+  produto ser considerado com grade furada.
+</Aside>
+
+## Grade curta
+
+No modo **Quantidade de variações**, produtos cadastrados com menos variações que o
+mínimo escolhido não são avaliados por essa regra. Assim, um produto que nasceu com
+duas opções não é reprovado por uma exigência de três opções disponíveis.
+
+Produtos com apenas uma variação também são isentos da avaliação de grade furada nos
+dois modos. Outras regras de estoque configuradas continuam valendo.
+
+## Configurar para a loja
+
+<Steps>
+1. Abra **Configurações** no dashboard.
+2. Encontre a regra de qualidade de estoque.
+3. Escolha **Percentual** ou **Quantidade de variações**.
+4. Defina o limite e confira a frase de exemplo exibida na tela.
+5. Salve as configurações.
+</Steps>
+
+Essa configuração vira o padrão da loja. No editor de uma vitrine ou combo, você pode
+manter o valor herdado ou personalizar a regra para aquela publicação.
+
+## Como interpretar
+
+- **Percentual:** o limite só é ultrapassado quando a porcentagem esgotada fica acima
+  do valor configurado. Exatamente 30% não reprova com um limite de 30%.
+- **Quantidade de variações:** o número indica quantas opções precisam continuar
+  disponíveis.
+- Variações sem controle de estoque não contam como esgotadas.
+
+## Próximos passos
+
+- [Configurações](/features/configuracoes/) — defina o padrão da loja.
+- [Vitrines](/features/shelves/) — personalize uma regra por vitrine.
+- [Combos](/features/combos/) — revise a regra usada por cada combinação.
